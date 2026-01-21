@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | Hood Homes</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-stack corner-logo">
+        <span class="hh">HH</span>
+        <span class="hood-homes">Hood Homes</span>
+      </div>
+    </div>
+
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<footer id="main-footer" class="footer premium-footer hidden-footer">
+
+  <div class="footer-glow-box">
+    <div class="footer-container container">
+
+      <div class="footer-info">
+        <h3>Talk To Us</h3>
+        <p>5 Valiant Lane, Cambridge, CB5 8XB</p>
+        <p><strong>Call:</strong> <a href="tel:07841519614">07841 519 614</a></p>
+        <p><strong>Email:</strong> <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a></p>
+      </div>
+
+      <!-- NETLIFY FORM -->
+      <div class="footer-form">
+        <form
+          name="footer-contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="contact-form">
+
+          <input type="hidden" name="form-name" value="footer-contact">
+
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Message" required></textarea>
+
+          <button type="submit" class="cta-button">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="/js/main.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/hero.js"></script>
+<script src="/js/cookies.js"></script>
+</body>
+</html>

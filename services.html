@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Services | Hood Homes</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-stack corner-logo">
+        <span class="hh">HH</span>
+        <span class="hood-homes">Hood Homes</span>
+      </div>
+    </div>
+
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-slideshow">
+    <img id="hero-img" src="/images/service1.jpg" alt="Hero image">
+  </div>
+
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title logo-stack">
+      <span class="hh">HH</span>
+      <span class="hood-homes">Our Services</span>
+    </h1>
+    <p class="hero-subtitle">
+      Professional Sales, Lettings & Property Management
+    </p>
+    <a href="/contact.html" class="cta-button">
+      Book a Valuation
+    </a>
+  </div>
+</section>
+
+<script>
+  const serviceHeroImages = [
+    "service1.jpg",
+    "service2.jpg",
+    "service3.jpg"
+  ];
+
+  let index = 0;
+  const hero = document.getElementById("hero-img");
+
+  setInterval(() => {
+    index = (index + 1) % serviceHeroImages.length;
+    hero.src = "/images/gallery/" + serviceHeroImages[index];
+  }, 5000);
+</script>
+
+<!-- Swiper Gallery -->
+<section class="services-gallery container">
+  <h2 class="section-heading">Our Work in Cambridge</h2>
+
+  <div class="swiper servicesGallery">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="/images/Cambridge1.jpg"></div>
+      <div class="swiper-slide"><img src="/images/Cambridge2.jpg"></div>
+      <div class="swiper-slide"><img src="/images/Cambridge3.jpg"></div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="split-section">
+  <div class="split-text" data-aos="fade-left" data-aos-delay="100">
+    <div class="split-text-box">
+      <h2 class="section-heading">Property Lettings & Management</h2>
+      <p>
+        We take care of the entire lettings process — from marketing your property and securing quality tenants,
+        to managing every detail of the tenancy. This includes rent collection, maintenance coordination,
+        compliance checks, and regular inspections, so you can enjoy the returns without the stress.
+      </p>
+      <p>
+        With the Renters Reform Bill set to bring major changes to tenancy laws, now more than ever landlords
+        need an agent who understands the legislation and can keep them compliant while still protecting their
+        interests.
+        We stay ahead of regulatory changes so you don’t get caught out, ensuring your property remains
+        profitable and legally secure.
+      </p>
+    </div>
+  </div>
+  <div class="split-image" data-aos="fade-right" data-aos-delay="200">
+    <img src="/images/Cambridge11.jpg" alt="Lettings Service">
+  </div>
+</section>
+
+<section class="split-section">
+  <div class="split-text" data-aos="fade-right" data-aos-delay="100">
+    <div class="split-text-box">
+      <h2 class="section-heading">Property Sales</h2>
+      <p>
+        We don’t just “list and wait” — we use modern, targeted sales methods designed to get your property
+        noticed by motivated buyers. This includes high-quality marketing, strategic online exposure, and strong
+        negotiation to achieve the best possible sale price in the shortest timeframe.
+      </p>
+      <p>
+        Every property is unique, so we tailor our sales strategy to its strengths and the current market
+        conditions.
+        From the first viewing to completion, we keep you informed and in control, ensuring your sale is handled
+        with the professionalism and energy it deserves.
+      </p>
+    </div>
+  </div>
+  <div class="split-image" data-aos="fade-left" data-aos-delay="200">
+    <img src="/images/Cambridge12.jpg" alt="Sales Service">
+  </div>
+</section>
+
+<section class="split-section">
+  <div class="split-text" data-aos="fade-left" data-aos-delay="100">
+    <div class="split-text-box">
+      <h2 class="section-heading">Property Investment</h2>
+      <p>
+        From sourcing high-potential opportunities to analysing the numbers and negotiating the deal,
+        we help you make informed investment decisions that perform in the real world.
+        Once your purchase is secured, we manage the entire refurbishment or conversion process from start to
+        finish.
+      </p>
+      <p>
+        We work with a network of trusted, long-standing contractors and specialists who share our commitment to
+        quality,
+        ensuring every project is completed to the highest standard, on time, and on budget.
+        Whether you’re building a portfolio or adding value to a single property, we make the process smooth,
+        efficient, and profitable.
+      </p>
+    </div>
+  </div>
+  <div class="split-image" data-aos="fade-right" data-aos-delay="200">
+    <img src="/images/Cambridge13.jpg" alt="Investment Service">
+  </div>
+</section>
+
+
+    <div class="container">
+<!-- Why Choose Us -->
+<section class="why-choose" data-aos="fade-up">
+    <h2 class="section-heading text-center">Why Choose Hood Homes</h2>
+
+    <div class="reasons-grid">
+
+        <!-- Row 1 -->
+        <div class="reason-row">
+            <div class="reason-item" data-aos="zoom-in" data-aos-delay="100">
+                <div class="reason-icon"><i class="fa-solid fa-handshake"></i></div>
+                <h3>Trusted Partnership</h3>
+                <p>We build every client relationship on trust and transparency, guiding you at every step.</p>
+            </div>
+
+            <div class="reason-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="reason-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>Proven Expertise</h3>
+                <p>Years of experience in lettings, sales, and investments give you the Cambridge market edge.</p>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="reason-row">
+            <div class="reason-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="reason-icon"><i class="fa-solid fa-life-ring"></i></div>
+                <h3>Safe Hands</h3>
+                <p>Your property stays secure and compliant with our expert, up-to-date guidance.</p>
+            </div>
+
+            <div class="reason-item" data-aos="zoom-in" data-aos-delay="400">
+                <div class="reason-icon"><i class="fa-solid fa-cloud-upload"></i></div>
+                <h3>Modern Technology</h3>
+                <p>From digital marketing to online bookings, we make the process simple and effective.</p>
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="reason-row">
+            <div class="reason-item" data-aos="zoom-in" data-aos-delay="500">
+                <div class="reason-icon"><i class="fa-solid fa-users"></i></div>
+                <h3>Personal Service</h3>
+                <p>We listen, adapt, and tailor solutions to deliver truly bespoke results.</p>
+            </div>
+        </div>
+
+    </div>
+
+<!-- Areas Covered -->
+<section class="areas-covered container" data-aos="fade-up">
+    <h2 class="section-heading">Areas Covered</h2>
+    <div class="areas-grid">
+        <div class="area-box" data-aos="fade-up" data-aos-delay="100">
+            <h3>Cambridge City Centre</h3>
+            <p>
+                The city centre blends historic architecture with modern convenience, offering a lifestyle that is both
+                dynamic and charming.
+                From grand Victorian terraces and elegant Edwardian homes to stylish new-build apartments, the centre
+                attracts a wide mix of residents including academics, professionals, investors, and students.
+                With world-famous colleges, museums, cultural landmarks, and a thriving café and dining scene on the
+                doorstep, living here means being immersed in the unique character of Cambridge.
+                Excellent transport connections and access to employment hubs make it one of the most desirable areas in
+                the region.
+            </p>
+        </div>
+
+        <div class="area-box" data-aos="fade-up" data-aos-delay="200">
+            <h3>South Cambridge</h3>
+            <p>
+                South Cambridge offers a quieter pace of life with attractive residential streets, excellent schools,
+                and proximity to Addenbrooke’s Hospital and the Biomedical Campus.
+                It is particularly popular with medical professionals, academics, and families who value the strong
+                sense of community and abundance of green spaces.
+                Local amenities include shops, cafés, and easy access to countryside walks, while excellent bus and
+                train links make commuting straightforward.
+                With strong demand from both buyers and renters, property in South Cambridge has proven to be a sound
+                long-term investment.
+            </p>
+        </div>
+
+        <div class="area-box" data-aos="fade-up" data-aos-delay="300">
+            <h3>Eddington</h3>
+            <p>
+                Eddington is Cambridge’s flagship modern development, designed with sustainability and community at its
+                heart.
+                Built with eco-friendly housing, energy-efficient infrastructure, and landscaped green spaces, it is a
+                forward-thinking district that sets a new standard for urban living.
+                Families, academics, and young professionals are drawn to its new schools, cycle-friendly layout, and
+                strong links to the University of Cambridge.
+                With modern design and future-proof planning, Eddington is fast becoming one of the most distinctive
+                neighbourhoods in the city.
+            </p>
+        </div>
+
+        <div class="area-box" data-aos="fade-up" data-aos-delay="400">
+            <h3>North Cambridge</h3>
+            <p>
+                North Cambridge combines traditional terraced streets with exciting new residential developments, making
+                it attractive to a diverse range of buyers and tenants.
+                Its appeal has grown significantly with the opening of Cambridge North Station, providing quick
+                connections to London and beyond.
+                The area also benefits from local shops, schools, and community spaces, alongside future regeneration
+                projects that continue to add value.
+                With growing demand from commuters, professionals, and investors, North Cambridge is one of the city’s
+                fastest-rising areas.
+            </p>
+        </div>
+
+        <div class="area-box" data-aos="fade-up" data-aos-delay="500">
+            <h3>Milton & Waterbeach</h3>
+            <p>
+                Just to the north of Cambridge, Milton and Waterbeach are thriving communities that combine riverside
+                charm with excellent transport links.
+                Both areas are well-connected by road and rail, making them particularly attractive to commuters, while
+                offering larger homes and more outdoor space than the city centre.
+                Local parks, schools, and village amenities provide a family-friendly environment, and ongoing
+                development plans in Waterbeach promise to bring even greater opportunities.
+                With a balance of traditional village character and exciting growth, they continue to draw strong
+                interest from buyers and investors.
+            </p>
+        </div>
+
+        <div class="area-box" data-aos="fade-up" data-aos-delay="600">
+            <h3>The Villages</h3>
+            <p>
+                Surrounding Cambridge are a wealth of picturesque villages, each offering something unique to buyers
+                seeking charm and space.
+                Grantchester, Coton, Comberton, and Barton are just a few examples where residents enjoy a countryside
+                lifestyle within minutes of the city.
+                Properties range from historic period cottages and barn conversions to modern family homes, with many
+                set in scenic locations.
+                For those wanting tranquillity without sacrificing convenience, the villages provide the perfect balance
+                of rural beauty and access to Cambridge’s opportunities.
+            </p>
+        </div>
+
+        <div class="area-box" data-aos="fade-up" data-aos-delay="700">
+            <h3>Histon & Impington</h3>
+            <p>
+                Histon and Impington are neighbouring villages that have grown into some of the most sought-after
+                locations around Cambridge.
+                Known for their excellent schools, welcoming community, and strong transport connections, they appeal
+                especially to families and professionals.
+                The villages have a vibrant local scene with independent shops, pubs, and regular events that foster a
+                close-knit atmosphere.
+                With a diverse mix of housing — from period properties to modern developments — they offer something for
+                every stage of life while maintaining consistently high demand.
+            </p>
+        </div>
+    </div>
+</section>
+
+</section>
+</div>
+
+<footer id="main-footer" class="footer premium-footer hidden-footer">
+
+  <div class="footer-glow-box">
+    <div class="footer-container container">
+
+      <div class="footer-info">
+        <h3>Talk To Us</h3>
+        <p>5 Valiant Lane, Cambridge, CB5 8XB</p>
+        <p><strong>Call:</strong> <a href="tel:07841519614">07841 519 614</a></p>
+        <p><strong>Email:</strong> <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a></p>
+      </div>
+
+      <!-- NETLIFY FORM -->
+      <div class="footer-form">
+        <form
+          name="footer-contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="contact-form">
+
+          <input type="hidden" name="form-name" value="footer-contact">
+
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Message" required></textarea>
+
+          <button type="submit" class="cta-button">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="/js/main.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/hero.js"></script>
+<script src="/js/cookies.js"></script>
+</body>
+</html>
