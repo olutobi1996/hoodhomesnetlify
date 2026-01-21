@@ -23,26 +23,27 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // ================= Hero image slideshow =================
-document.addEventListener("DOMContentLoaded", function() {
-    const heroImg = document.getElementById('hero-img');
-    const heroImagesEl = document.getElementById('hero-images-data');
-    if (!heroImg || !heroImagesEl) return;
+document.addEventListener("DOMContentLoaded", () => {
+  const heroImg = document.getElementById("hero-img");
+  const heroData = document.getElementById("hero-images-data");
 
-    const heroImages = JSON.parse(heroImagesEl.textContent);
-    let current = 0;
+  if (!heroImg || !heroData) return;
 
-    // Preload images
-    const preloaded = heroImages.map(src => {
-        const img = new Image();
-        img.src = "/images/gallery/" + src;
-        return img;
-    });
+  const heroImages = JSON.parse(heroData.textContent);
+  let index = 0;
 
-    setInterval(() => {
-        current = (current + 1) % heroImages.length;
-        heroImg.src = preloaded[current].src;
-    }, 5000);
+  // Preload images (prevents blank flashes)
+  heroImages.forEach(src => {
+    const img = new Image();
+    img.src = "/images/" + src;
+  });
+
+  setInterval(() => {
+    index = (index + 1) % heroImages.length;
+    heroImg.src = "/images/" + heroImages[index];
+  }, 5000);
 });
+
 
 // ================= Hamburger menu =================
 document.addEventListener('DOMContentLoaded', () => {
@@ -138,3 +139,4 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCarousel();
     }, 4000);
 });
+
