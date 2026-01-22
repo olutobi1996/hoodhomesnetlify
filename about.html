@@ -172,59 +172,120 @@
   </div>
 </section>
 
-<!-- Google Maps -->
-<section class="locations-map" data-aos="fade-up">
-  <div class="fancy-hover-box text-center">
-    <h2 class="section-heading">Find Us Here</h2>
-    <p>
-      5 Valiant Lane, Cambridge, CB5 8XB<br>
-      <strong>Call:</strong> <a href="tel:07841519614">07841519614</a><br>
-      <strong>Email:</strong> <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a>
-    </p>
+ <!-- GOOGLE MAPS EMBED -->
+    <section class="locations-map" data-aos="fade-up" data-aos-delay="100">
+      <div class="fancy-hover-box text-center">
+        <div class="section-title" data-aos="fade-up" data-aos-delay="150">
+          <h2 class="section-heading">Find Us Here</h2>
+          <p
+            class="map-info location-text"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Our Office<br />
+            5 Valiant Lane, Cambridge, CB5 8XB<br />
+            <strong>Call us:</strong> <a href="tel:07841519614">07841519614</a
+            ><br />
+            <strong>Email:</strong>
+            <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a>
+          </p>
+        </div>
 
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2262.111144407372!2d0.155526!3d52.203123"
-      width="100%"
-      height="400"
-      style="border:0;border-radius:12px"
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
+        <div class="map-wrapper" data-aos="fade-up" data-aos-delay="250">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2262.111144407372!2d0.155526!3d52.203123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48768f3f6f6eeb03%3A0x123456789abcdef!2s5%20Valiant%20Lane%2C%20Cambridge!5e0!3m2!1sen!2suk!4v0000000000000!5m2!1sen!2suk"
+            width="100%"
+            height="400"
+            style="border: 0; border-radius: 12px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
 <footer id="main-footer" class="footer premium-footer hidden-footer">
 
   <div class="footer-glow-box">
     <div class="footer-container container">
 
+      <!-- Left: Company Info -->
       <div class="footer-info">
         <h3>Talk To Us</h3>
+        <p>We’d love to hear from you. Reach out for property advice, valuations, or enquiries.</p>
+
+        <h4>Our Office</h4>
+
         <p>5 Valiant Lane, Cambridge, CB5 8XB</p>
-        <p><strong>Call:</strong> <a href="tel:07841519614">07841 519 614</a></p>
-        <p><strong>Email:</strong> <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a></p>
+
+        <p><strong>Call:</strong>
+          <a href="tel:07841519614">07841 519 614</a>
+        </p>
+
+        <p><strong>Email:</strong>
+          <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a>
+        </p>
+
+        <p>
+          <a href="https://www.facebook.com/" target="_blank">Follow us on Facebook</a>
+        </p>
       </div>
 
-      <!-- NETLIFY FORM -->
+      <!-- Right: Netlify Contact Form -->
       <div class="footer-form">
-        <form
-          name="footer-contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          class="contact-form">
+        <h4>Send us a message</h4>
 
+        <form name="footer-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
           <input type="hidden" name="form-name" value="footer-contact">
 
           <input type="text" name="name" placeholder="Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Message" required></textarea>
+          <input type="tel" name="phone" placeholder="Phone">
+          <input type="email" name="email" placeholder="Email Address" required>
+          <textarea name="message" placeholder="Message" rows="3" required></textarea>
+
+          <div class="consent-box">
+            <input type="checkbox" name="consent" required>
+            <label>I consent to an agent of Hood Homes contacting me.</label>
+          </div>
 
           <button type="submit" class="cta-button">Submit</button>
         </form>
       </div>
 
     </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+
+      <!-- Partner Logos -->
+      <div class="logos-scroll-wrapper">
+        <ul class="partner-logos-scroll">
+          <li><img src="/images/zoopla.svg" alt="Zoopla"></li>
+          <li><img src="/images/rightmove.svg" alt="Rightmove"></li>
+          <li><img src="/images/the-property-ombudsman.svg" alt="Ombudsman"></li>
+          <li><img src="/images/tsi-3.svg" alt="TSI"></li>
+          <li><img src="/images/tds.svg" alt="TDS"></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-legal-links">
+        <p>
+          <a href="/privacy-policy.html">Privacy Policy</a> |
+          <a href="/terms-and-conditions.html">Terms & Conditions</a> |
+          <a href="/cookies.html">Cookies</a>
+        </p>
+
+        <p class="footer-bottom">
+          &copy; 2026 Hood Homes. All Rights Reserved.
+        </p>
+      </div>
+
+    </div>
   </div>
 </footer>
+
   <!-- JS Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
@@ -234,6 +295,27 @@
 
   <!-- Your Custom JS -->
   <script src="/js/script.js"></script>
+<script>
+  const heroImages = [
+    "/images/Cambridge1.jpg",
+    "/images/Cambridge2.jpg",
+    "/images/Cambridge3.jpg",
+    "/images/Cambridge4.jpg"
+  ];
+
+  let currentIndex = 0;
+  const heroImg = document.getElementById("hero-img");
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % heroImages.length;
+    heroImg.classList.add("fade-out");
+
+    setTimeout(() => {
+      heroImg.src = heroImages[currentIndex];
+      heroImg.classList.remove("fade-out");
+    }, 500);
+  }, 5000);
+</script>
 
 </body>
 </html>

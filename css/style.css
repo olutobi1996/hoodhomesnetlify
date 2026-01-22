@@ -998,7 +998,7 @@
 }
 /* ========================= Footer General ========================= */
  footer.premium-footer {
-     background: url("/static/images/Cambridge2.jpg") no-repeat center center;
+    background: url("/images/Cambridge2.jpg") no-repeat center center;
      background-size: cover;
      color: #000;
      padding: 2rem 1rem;
@@ -1012,7 +1012,8 @@
      max-width: 1100px;
      margin: 2rem auto;
      padding: 4rem 3rem;
-     background-color: #fff;
+     background-color: rgba(255, 255, 255, 0.82);
+
     /* White background for readability */
      border: 2px solid var(--primary-yellow);
      border-radius: 14px;

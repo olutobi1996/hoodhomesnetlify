@@ -336,35 +336,82 @@
   <div class="footer-glow-box">
     <div class="footer-container container">
 
+      <!-- Left: Company Info -->
       <div class="footer-info">
         <h3>Talk To Us</h3>
+        <p>We’d love to hear from you. Reach out for property advice, valuations, or enquiries.</p>
+
+        <h4>Our Office</h4>
+
         <p>5 Valiant Lane, Cambridge, CB5 8XB</p>
-        <p><strong>Call:</strong> <a href="tel:07841519614">07841 519 614</a></p>
-        <p><strong>Email:</strong> <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a></p>
+
+        <p><strong>Call:</strong>
+          <a href="tel:07841519614">07841 519 614</a>
+        </p>
+
+        <p><strong>Email:</strong>
+          <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a>
+        </p>
+
+        <p>
+          <a href="https://www.facebook.com/" target="_blank">Follow us on Facebook</a>
+        </p>
       </div>
 
-      <!-- NETLIFY FORM -->
+      <!-- Right: Netlify Contact Form -->
       <div class="footer-form">
-        <form
-          name="footer-contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          class="contact-form">
+        <h4>Send us a message</h4>
 
+        <form name="footer-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
           <input type="hidden" name="form-name" value="footer-contact">
 
           <input type="text" name="name" placeholder="Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Message" required></textarea>
+          <input type="tel" name="phone" placeholder="Phone">
+          <input type="email" name="email" placeholder="Email Address" required>
+          <textarea name="message" placeholder="Message" rows="3" required></textarea>
+
+          <div class="consent-box">
+            <input type="checkbox" name="consent" required>
+            <label>I consent to an agent of Hood Homes contacting me.</label>
+          </div>
 
           <button type="submit" class="cta-button">Submit</button>
         </form>
       </div>
 
     </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+
+      <!-- Partner Logos -->
+      <div class="logos-scroll-wrapper">
+        <ul class="partner-logos-scroll">
+          <li><img src="/images/zoopla.svg" alt="Zoopla"></li>
+          <li><img src="/images/rightmove.svg" alt="Rightmove"></li>
+          <li><img src="/images/the-property-ombudsman.svg" alt="Ombudsman"></li>
+          <li><img src="/images/tsi-3.svg" alt="TSI"></li>
+          <li><img src="/images/tds.svg" alt="TDS"></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-legal-links">
+        <p>
+          <a href="/privacy-policy.html">Privacy Policy</a> |
+          <a href="/terms-and-conditions.html">Terms & Conditions</a> |
+          <a href="/cookies.html">Cookies</a>
+        </p>
+
+        <p class="footer-bottom">
+          &copy; 2026 Hood Homes. All Rights Reserved.
+        </p>
+      </div>
+
+    </div>
   </div>
 </footer>
+
 
 
 <!-- JS Libraries -->
@@ -374,6 +421,27 @@
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 <script src="/js/script.js"></script>
+<script>
+  const heroImages = [
+    "/images/Cambridge1.jpg",
+    "/images/Cambridge2.jpg",
+    "/images/Cambridge3.jpg",
+    "/images/Cambridge4.jpg"
+  ];
+
+  let currentIndex = 0;
+  const heroImg = document.getElementById("hero-img");
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % heroImages.length;
+    heroImg.classList.add("fade-out");
+
+    setTimeout(() => {
+      heroImg.src = heroImages[currentIndex];
+      heroImg.classList.remove("fade-out");
+    }, 500);
+  }, 5000);
+</script>
 
 </body>
 </html>
