@@ -913,16 +913,25 @@
 }
  .partner-logos-scroll {
      display:flex;
-     gap:3rem;
+     gap:4rem;
      list-style:none;
      padding:0;
-     margin:0;
-     animation:scroll-logos 20s linear infinite;
+     margin:0;                   /* Space between logos */
+       width: max-content; /* 🔑 REQUIRED */
+  animation: scroll-logos 60s linear infinite;
+
 }
  .partner-logos-scroll li img {
-     height:40px;
+       height: 80px;   
      object-fit:contain;
 }
+/* Make specific logos larger */
+.partner-logos-scroll li.logo-large img {
+  height: 100px;          /* bigger than others */
+  max-height: 100px;
+  transform: scale(1.15); /* optional fine-tune */
+}
+
  @keyframes scroll-logos {
      0% {
         transform:translateX(0);
@@ -1117,11 +1126,11 @@
 /* Footer Bottom Bar */
  .footer-bottom-bar {
      width: 100%;
-     padding: 1rem 0.5rem;
+     padding: 3rem 1rem;              
      display: flex;
      flex-direction: column;
      align-items: center;
-     gap: 1rem;
+     gap: 2rem;
      border-top: 1px solid rgba(0, 0, 0, 0.2);
      margin-top: 2rem;
      text-align: center;
