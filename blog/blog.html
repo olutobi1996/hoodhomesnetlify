@@ -27,28 +27,42 @@
       <li><a href="/index.html">Home</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/services.html">Services</a></li>
-      <li><a href="/blog.html">Blog</a></li>
       <li><a href="/gallery.html">Gallery</a></li>
       <li><a href="/contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<main>
+    <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-slideshow">
+      <img id="hero-img" src="/images/Cambridge1.jpg" alt="Hero image">
+    </div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="zoom-in" data-aos-delay="100">
+      <h1 class="hero-title logo-stack">
+        <span class="hh" data-aos="fade-right" data-aos-delay="200">HH</span>
+        <span class="hood-homes" data-aos="fade-left" data-aos-delay="300">Blog</span>
+      </h1>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+       Insights, Updates & Tips from Hood Homes
+      </p>
+      <a href="/contact.html" class="cta-button" data-aos="zoom-in" data-aos-delay="500">
+        Book a Valuation
+      </a>
+    </div>
+  </section>
+
+  <main>
 
 <div class="page-light-theme">
 <section class="blog-section container py-5" style="padding-top:120px;" data-aos="fade-up">
-
-  <div class="section-title text-center mb-5">
-    <h2 class="section-heading">Blog</h2>
-    <p>Property insights, advice, and market knowledge</p>
-  </div>
-
   <div class="blog-grid">
 
     <!-- BLOG CARD -->
     <article class="blog-card fancy-hover-box">
-      <a href="/blog/cambridge-property-investors.html">
+      <a href="/blog/cambridge-property-market-2025">
         <img src="/images/35_Knightly_Avenue_15.jpg" alt="Cambridge Property Investors">
       </a>
 
@@ -61,7 +75,7 @@
           guidance, and results.
         </p>
 
-        <a href="/blog/cambridge-property-investors.html" class="btn-small">
+        <a href="/blog/cambridge-property-investors.html" class="cta-button">
           Read More →
         </a>
       </div>
@@ -83,7 +97,7 @@
       investment. Strong rental demand, capital growth and strategy all play a role.
     </p>
 
-    <a href="/blog/investing-in-cambridge.html" class="btn-small">
+    <a href="/blog/investing-in-cambridge.html" class="cta-button">
       Read More →
     </a>
   </div>
@@ -105,7 +119,7 @@
       and the city continues to be a strong market for investors.
     </p>
 
-    <a href="/blog/cambridge-property-market-2025.html" class="btn-small">
+    <a href="/blog/cambridge-property-market-2025.html" class="cta-button">
       Read More →
     </a>
   </div>
@@ -127,7 +141,7 @@
       and why a good agent is essential.
     </p>
 
-    <a href="/blog/renters-rights-bill.html" class="btn-small">
+    <a href="/blog/renters-rights-bill.html" class="cta-button">
       Read More →
     </a>
   </div>
@@ -149,7 +163,7 @@
       tenant management and more.
     </p>
 
-    <a href="/blog/quality-letting-agent.html" class="btn-small">
+    <a href="/blog/quality-letting-agent.html" class="cta-button">
       Read More →
     </a>
   </div>
@@ -163,43 +177,131 @@
 
 </main>
 
-<footer id="main-footer" class="footer premium-footer hidden-footer">
+ <footer id="main-footer" class="footer premium-footer">
 
   <div class="footer-glow-box">
     <div class="footer-container container">
 
+      <!-- Left: Company Info -->
       <div class="footer-info">
         <h3>Talk To Us</h3>
+        <p>We’d love to hear from you. Reach out for property advice, valuations, or enquiries.</p>
+
+        <h4>Our Office</h4>
+
         <p>5 Valiant Lane, Cambridge, CB5 8XB</p>
-        <p><strong>Call:</strong> <a href="tel:07841519614">07841 519 614</a></p>
-        <p><strong>Email:</strong> <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a></p>
+
+        <p><strong>Call:</strong>
+          <a href="tel:07841519614">07841 519 614</a>
+        </p>
+
+        <p><strong>Email:</strong>
+          <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a>
+        </p>
+
+        <p>
+          <a href="https://www.facebook.com/" target="_blank">Follow us on Facebook</a>
+        </p>
       </div>
 
-      <!-- NETLIFY FORM -->
+      <!-- Right: Netlify Contact Form -->
       <div class="footer-form">
-        <form
-          name="footer-contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          class="contact-form">
+        <h4>Send us a message</h4>
 
+        <form name="footer-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
           <input type="hidden" name="form-name" value="footer-contact">
 
           <input type="text" name="name" placeholder="Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Message" required></textarea>
+          <input type="tel" name="phone" placeholder="Phone">
+          <input type="email" name="email" placeholder="Email Address" required>
+          <textarea name="message" placeholder="Message" rows="3" required></textarea>
+
+          <div class="consent-box">
+            <input type="checkbox" name="consent" required>
+            <label>I consent to an agent of Hood Homes contacting me.</label>
+          </div>
 
           <button type="submit" class="cta-button">Submit</button>
         </form>
       </div>
 
     </div>
+  <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+
+      <!-- Partner Logos -->
+      <div class="logos-scroll-wrapper">
+        <ul class="partner-logos-scroll">
+          <li><img src="/images/zoopla.svg" alt="Zoopla"></li>
+          <li><img src="/images/rightmove.svg" alt="Rightmove"></li>
+          <li><img src="/images/the-property-ombudsman.svg" alt="Ombudsman"></li>
+          <li class="logo-large">
+  <img src="/images/clientmoneyprotection.png" alt="Client Money Protect">
+</li>
+<li class="logo-large">
+  <img src="/images/depositprotection.jpg" alt="Deposit Protection Service">
+</li>
+          <li><img src="/images/tds.svg" alt="TDS"></li>
+          <!-- Duplicate set (REQUIRED) -->
+             <li><img src="/images/zoopla.svg" alt="Zoopla"></li>
+          <li><img src="/images/rightmove.svg" alt="Rightmove"></li>
+          <li><img src="/images/the-property-ombudsman.svg" alt="Ombudsman"></li>
+          <li class="logo-large">
+  <img src="/images/clientmoneyprotection.png" alt="Client Money Protect">
+</li>
+
+<li class="logo-large">
+  <img src="/images/depositprotection.jpg" alt="Deposit Protection Service">
+</li>
+          <li><img src="/images/tds.svg" alt="TDS"></li>
+        </ul>
+      </div>
+      <!-- Legal -->
+      <div class="footer-legal-links">
+        <p>
+          <a href="/privacy-policy.html">Privacy Policy</a> |
+          <a href="/terms-and-conditions.html">Terms & Conditions</a> |
+          <a href="/cookies.html">Cookies</a>
+        </p>
+
+        <p class="footer-bottom">
+          &copy; 2026 Hood Homes. All Rights Reserved.
+        </p>
+      </div>
+
+    </div>
   </div>
 </footer>
+ <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
+  <!-- Your Custom JS -->
+  <script src="/js/script.js"></script>
+<script>
+  const heroImages = [
+    "/images/Cambridge1.jpg",
+    "/images/Cambridge2.jpg",
+    "/images/Cambridge3.jpg",
+    "/images/Cambridge4.jpg"
+  ];
+
+  let currentIndex = 0;
+  const heroImg = document.getElementById("hero-img");
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % heroImages.length;
+    heroImg.classList.add("fade-out");
+
+    setTimeout(() => {
+      heroImg.src = heroImages[currentIndex];
+      heroImg.classList.remove("fade-out");
+    }, 500);
+  }, 5000);
+</script>
 
 </body>
 </html>
