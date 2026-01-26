@@ -1,11 +1,10 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You | Hood Homes</title>
-    <link rel="stylesheet" href="/css/style.css ">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
         /* Center layout */
         .success-wrapper {
@@ -69,17 +68,16 @@
             color: var(--primary-yellow);
             box-shadow: 0 0 15px var(--primary-yellow);
         }
-
         @keyframes fadeInUp {
             from {opacity: 0; transform: translateY(30px);}
             to {opacity: 1; transform: translateY(0);}
         }
     </style>
     <script>
-        // Auto-redirect after 5 seconds
-        setTimeout(() => {
-            window.location.href = "{% url 'core:home' %}";
-        }, 5000);
+      // Auto-redirect after 5 seconds
+      setTimeout(() => {
+          window.location.href = "/index.html";
+      }, 5000);
     </script>
 </head>
 <body>
