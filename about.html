@@ -240,30 +240,37 @@
         <p>
           <a href="https://www.facebook.com/" target="_blank">Follow us on Facebook</a>
         </p>
+      </div> 
+ 
+  <!-- Footer Form Column -->
+ <div class="footer-form">
+  <h4>Send us a message</h4>
+  <div class="form-card">
+    <form
+      name="footer-contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="contact-form"
+       action="/thank-you.html"
+    >
+      <input type="hidden" name="form-name" value="footer-contact">
+      <input type="hidden" name="bot-field">
+
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="tel" name="phone" placeholder="Phone">
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" placeholder="Message" rows="3" required></textarea>
+
+      <div class="consent-box">
+        <input type="checkbox" name="consent" required>
+        <label>I consent to an agent of Hood Homes contacting me.</label>
       </div>
 
-      <!-- Right: Netlify Contact Form -->
-      <div class="footer-form">
-        <h4>Send us a message</h4>
-
-        <form name="footer-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-          <input type="hidden" name="form-name" value="footer-contact">
-
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="tel" name="phone" placeholder="Phone">
-          <input type="email" name="email" placeholder="Email Address" required>
-          <textarea name="message" placeholder="Message" rows="3" required></textarea>
-
-          <div class="consent-box">
-            <input type="checkbox" name="consent" required>
-            <label>I consent to an agent of Hood Homes contacting me.</label>
-          </div>
-
-          <button type="submit" class="cta-button">Submit</button>
-        </form>
-      </div>
-
-    </div>
+      <button type="submit" class="cta-button">Submit</button>
+    </form>
+  </div>
+</div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom-bar">

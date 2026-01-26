@@ -1082,19 +1082,24 @@
      border-radius: 12px;
      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
- .contact-form input, .contact-form textarea {
-     width: 100%;
-     padding: 0.8rem 1rem;
-     margin-bottom: 1rem;
-     border-radius: 8px;
-     border: 1px solid #ccc;
-     background: #fff;
-     color: #000;
-     font-size: 0.95rem;
+footer.premium-footer .footer-form .form-card .contact-form input,
+footer.premium-footer .footer-form .form-card .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #000;
+    font-size: 0.95rem;
 }
- .contact-form input::placeholder, .contact-form textarea::placeholder {
-     color: #555;
+
+footer.premium-footer .footer-form .form-card .contact-form input::placeholder,
+footer.premium-footer .footer-form .form-card .contact-form textarea::placeholder {
+    color: #555;
 }
+
+
 /* Consent Box */
  .consent-box {
      display: flex;
