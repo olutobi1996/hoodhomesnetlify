@@ -21,6 +21,8 @@
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+  <!-- Load Head image -->
+  <link rel="preload" as="image" href="/images/Cambridge1.jpg">
 </head>
 <header>
   <nav class="navbar">
@@ -51,7 +53,7 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-slideshow">
-    <img id="hero-img" src="/images/service1.jpg" alt="Hero image">
+    <img id="hero-img" src="/images/Cambridge1.jpg" alt="Hero image">
   </div>
 
   <div class="hero-overlay"></div>
@@ -68,22 +70,6 @@
     </a>
   </div>
 </section>
-
-<script>
-  const serviceHeroImages = [
-    "service1.jpg",
-    "service2.jpg",
-    "service3.jpg"
-  ];
-
-  let index = 0;
-  const hero = document.getElementById("hero-img");
-
-  setInterval(() => {
-    index = (index + 1) % serviceHeroImages.length;
-    hero.src = "/images/gallery/" + serviceHeroImages[index];
-  }, 5000);
-</script>
 
 <!-- Swiper Gallery -->
 <section class="services-gallery container">
@@ -429,8 +415,6 @@
   </div>
 </footer>
 
-
-
 <!-- JS Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
@@ -448,6 +432,11 @@
 
   let currentIndex = 0;
   const heroImg = document.getElementById("hero-img");
+
+  // Show image once first load completes
+  heroImg.onload = () => {
+    heroImg.classList.add("loaded");
+  };
 
   setInterval(() => {
     currentIndex = (currentIndex + 1) % heroImages.length;

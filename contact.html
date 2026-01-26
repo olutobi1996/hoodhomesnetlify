@@ -20,6 +20,8 @@
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Load Head image -->
+  <link rel="preload" as="image" href="/images/Cambridge1.jpg">
 </head>
 <header>
   <nav class="navbar">
@@ -173,7 +175,7 @@
 
   <!-- Your Custom JS -->
   <script src="/js/script.js"></script>
-  <script>
+<script>
   const heroImages = [
     "/images/Cambridge1.jpg",
     "/images/Cambridge2.jpg",
@@ -183,6 +185,11 @@
 
   let currentIndex = 0;
   const heroImg = document.getElementById("hero-img");
+
+  // Show image once first load completes
+  heroImg.onload = () => {
+    heroImg.classList.add("loaded");
+  };
 
   setInterval(() => {
     currentIndex = (currentIndex + 1) % heroImages.length;

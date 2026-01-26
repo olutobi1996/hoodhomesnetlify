@@ -20,6 +20,9 @@
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Load Head image -->
+  <link rel="preload" as="image" href="/images/Cambridge1.jpg">
+
 </head>
 <body>
 
@@ -299,6 +302,11 @@
   let currentIndex = 0;
   const heroImg = document.getElementById("hero-img");
 
+  // Show image once first load completes
+  heroImg.onload = () => {
+    heroImg.classList.add("loaded");
+  };
+
   setInterval(() => {
     currentIndex = (currentIndex + 1) % heroImages.length;
     heroImg.classList.add("fade-out");
@@ -309,6 +317,5 @@
     }, 500);
   }, 5000);
 </script>
-
 </body>
 </html>

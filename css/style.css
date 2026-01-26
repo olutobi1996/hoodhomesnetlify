@@ -243,6 +243,7 @@
 /* ---------------- Hero Section ---------------- */
  .hero {
      position: relative;
+     background-image: url("/images/Cambridge1.jpg"); /* fallback */
      height: 90vh;
      display: flex;
      justify-content: center;

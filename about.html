@@ -20,6 +20,8 @@
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Load Head image -->
+  <link rel="preload" as="image" href="/images/Cambridge1.jpg">
 </head>
 <header>
   <nav class="navbar">
@@ -51,7 +53,7 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-slideshow">
-    <img id="hero-img" src="/images/about1.jpg" alt="Hero image">
+    <img id="hero-img" src="/images/Cambridge1.jpg" alt="Hero image">
   </div>
 
   <div class="hero-overlay"></div>
@@ -68,17 +70,6 @@
     </a>
   </div>
 </section>
-
-<script>
-  const heroImages = ["about1.jpg", "about2.jpg", "about3.jpg"];
-  let heroIndex = 0;
-  const heroImg = document.getElementById("hero-img");
-
-  setInterval(() => {
-    heroIndex = (heroIndex + 1) % heroImages.length;
-    heroImg.src = "/images/gallery/" + heroImages[heroIndex];
-  }, 5000);
-</script>
 
 <!-- About Page Full Background -->
 <div class="about-page">
@@ -341,6 +332,11 @@
 
   let currentIndex = 0;
   const heroImg = document.getElementById("hero-img");
+
+  // Show image once first load completes
+  heroImg.onload = () => {
+    heroImg.classList.add("loaded");
+  };
 
   setInterval(() => {
     currentIndex = (currentIndex + 1) % heroImages.length;
