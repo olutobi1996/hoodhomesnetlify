@@ -216,21 +216,22 @@
       <div class="footer-form">
         <h4>Send us a message</h4>
 
-        <form name="footer-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-          <input type="hidden" name="form-name" value="footer-contact">
+        <form
+  name="footer-contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="footer-contact">
+  <input type="hidden" name="bot-field">
 
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="tel" name="phone" placeholder="Phone">
-          <input type="email" name="email" placeholder="Email Address" required>
-          <textarea name="message" placeholder="Message" rows="3" required></textarea>
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
 
-          <div class="consent-box">
-            <input type="checkbox" name="consent" required>
-            <label>I consent to an agent of Hood Homes contacting me.</label>
-          </div>
+  <button type="submit">Send</button>
+</form>
 
-          <button type="submit" class="cta-button">Submit</button>
-        </form>
       </div>
 
     </div>
