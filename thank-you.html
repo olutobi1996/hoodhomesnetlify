@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You | Hood Homes</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="/css/style.css ">
     <style>
         /* Center layout */
         .success-wrapper {
@@ -13,7 +13,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: url("{% static 'images/Cambridge1.jpg' %}") no-repeat center center / cover;
+            background: url(/images/Cambridge10.jpg) no-repeat center center / cover;
             position: relative;
         }
         .success-overlay {
@@ -89,7 +89,9 @@
             <h1>Thank You!</h1>
             <p>Your message has been successfully sent to Hood Homes.<br>
             We appreciate your enquiry and will get back to you shortly.</p>
-            <a href="{% url 'core:home' %}" class="cta-button">Return to Home</a>
+             <a href="/index.html" class="cta-button" data-aos="zoom-in" data-aos-delay="500">
+        Home
+      </a>
         </div>
     </div>
 </body>
