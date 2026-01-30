@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <!-- Load Head image -->
   <link rel="preload" as="image" href="/images/Cambridge1.jpg">
+    <!-- Flatpickr-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 </head>
 <header>
   <nav class="navbar">
@@ -40,6 +43,7 @@
       <li><a href="/index.html">Home</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/services.html">Services</a></li>
+      <li><a href="/properties.html">Properties</a></li>
       <li><a href="/blog/blog.html">Blog</a></li>
       <li><a href="/gallery.html">Gallery</a></li>
       <li><a href="/contact.html">Contact</a></li>
@@ -67,6 +71,50 @@
       </a>
     </div>
   </section>
+
+  <div class="property-cards">
+  <div class="property-card" data-calendar-id="PROPERTY_1_ID">
+    <img src="/images/flat1.jpg" alt="Cambridge Flat">
+    <h4>Oldfeilds, Bradfeild Combust, Bury St Edmunds, Suffolk, IP30 OLS</h4>
+  </div>
+</div>
+
+  <section class="booking-section" id="booking-section">
+  <div class="container">
+    <h2>Book a Short-Term Stay</h2>
+    <p>Select your property and available dates below to request your booking.</p>
+
+    <form name="booking" method="POST" data-netlify="true" class="booking-form">
+      <input type="hidden" name="form-name" value="booking">
+      <input type="hidden" name="property" value="Hodo Homes – Short term stays">
+      <input type="hidden" name="checkin">
+      <input type="hidden" name="checkout">
+
+      <div class="form-group">
+        <label>Check-in</label>
+        <input id="checkin" type="text" placeholder="Select date" readonly>
+      </div>
+
+      <div class="form-group">
+        <label>Check-out</label>
+        <input id="checkout" type="text" placeholder="Select date" readonly>
+      </div>
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+
+      <button type="submit" class="cta-button">Request Booking</button>
+    </form>
+  </div>
+</section>
+
 
 <footer id="main-footer" class="footer premium-footer hidden-footer">
 
@@ -179,6 +227,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <!-- Your Custom JS -->
   <script src="/js/script.js"></script>
@@ -208,6 +257,53 @@
     }, 500);
   }, 5000);
 </script>
+
+<script>
+const CALENDAR_ID = "PASTE_CALENDAR_ID";
+const API_KEY = "PASTE_API_KEY";
+
+let disabledDates = [];
+
+fetch(`https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`)
+  .then(res => res.json())
+  .then(data => {
+    data.items.forEach(event => {
+      if (!event.start.date || !event.end.date) return;
+
+      let start = new Date(event.start.date);
+      let end = new Date(event.end.date);
+
+      while (start < end) {
+        disabledDates.push(start.toISOString().split("T")[0]);
+        start.setDate(start.getDate() + 1);
+      }
+    });
+
+    initPickers();
+  });
+
+function initPickers() {
+  const checkinPicker = flatpickr("#checkin", {
+    minDate: "today",
+    dateFormat: "Y-m-d",
+    disable: disabledDates,
+    onChange: function(selectedDates) {
+      document.querySelector("input[name='checkin']").value = selectedDates[0].toISOString().split("T")[0];
+      checkoutPicker.set("minDate", selectedDates[0]);
+    }
+  });
+
+  const checkoutPicker = flatpickr("#checkout", {
+    minDate: "today",
+    dateFormat: "Y-m-d",
+    disable: disabledDates,
+    onChange: function(selectedDates) {
+      document.querySelector("input[name='checkout']").value = selectedDates[0].toISOString().split("T")[0];
+    }
+  });
+}
+</script>
+
 
 </body>
 </html>
