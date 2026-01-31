@@ -23,6 +23,11 @@
   <!-- Load Head image -->
   <link rel="preload" as="image" href="/images/Cambridge1.jpg">
 
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css"
+/>
+
 </head>
 <body>
 
@@ -298,6 +303,18 @@
   <img id="lightbox-img">
 </div>
 
+<section class="availability-section container">
+  <h2>Availability</h2>
+
+  <div class="calendar-embed">
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=17c1d7c6b40f979b403bcb21541e080eb9d591c3357ca7a3a5f57960105d9de6%40group.calendar.google.com&ctz=Europe%2FLondon&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showCalendars=0&showTz=0"
+      frameborder="0"
+      scrolling="no">
+    </iframe>
+  </div>
+</section>
+
 
   <section class="booking-section">
   <div class="booking-form">
@@ -344,6 +361,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 
   <!-- Your Custom JS -->
   <script src="/js/script.js"></script>
@@ -372,56 +391,6 @@
       heroImg.classList.remove("fade-out");
     }, 500);
   }, 5000);
-</script>
-
-<script>
-const CALENDAR_ID =
-"17c1d7c6b40f979b403bcb21541e080eb9d591c3357ca7a3a5f57960105d9de6@group.calendar.google.com";
-
-const API_KEY = "PASTE_API_KEY_HERE";
-
-let disabledDates = [];
-
-fetch(`https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`)
-  .then(res => res.json())
-  .then(data => {
-    data.items.forEach(event => {
-      if (!event.start.date || !event.end.date) return;
-
-      let start = new Date(event.start.date);
-      let end = new Date(event.end.date);
-
-      while (start < end) {
-        disabledDates.push(start.toISOString().split("T")[0]);
-        start.setDate(start.getDate() + 1);
-      }
-    });
-
-    initPickers();
-  });
-
-function initPickers() {
-  const checkinPicker = flatpickr("#checkin", {
-    minDate: "today",
-    dateFormat: "Y-m-d",
-    disable: disabledDates,
-    onChange: function(dates) {
-      document.querySelector("input[name='checkin']").value =
-        dates[0].toISOString().split("T")[0];
-      checkoutPicker.set("minDate", dates[0]);
-    }
-  });
-
-  const checkoutPicker = flatpickr("#checkout", {
-    minDate: "today",
-    dateFormat: "Y-m-d",
-    disable: disabledDates,
-    onChange: function(dates) {
-      document.querySelector("input[name='checkout']").value =
-        dates[0].toISOString().split("T")[0];
-    }
-  });
-}
 </script>
 
 <script>
@@ -458,6 +427,32 @@ lightbox.addEventListener("click", e => {
   if (e.target === lightbox) lightbox.style.display = "none";
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
+  const checkinPicker = flatpickr("#checkin", {
+    minDate: "today",
+    dateFormat: "Y-m-d",
+    clickOpens: true,
+    onChange: function(selectedDates) {
+      document.querySelector("input[name='checkin']").value =
+        selectedDates[0].toISOString().split("T")[0];
+
+      checkoutPicker.set("minDate", selectedDates[0]);
+    }
+  });
+
+  const checkoutPicker = flatpickr("#checkout", {
+    minDate: "today",
+    dateFormat: "Y-m-d",
+    clickOpens: true,
+    onChange: function(selectedDates) {
+      document.querySelector("input[name='checkout']").value =
+        selectedDates[0].toISOString().split("T")[0];
+    }
+  });
+
+});
+</script>
 </body>
 </html>

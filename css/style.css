@@ -1359,6 +1359,21 @@ footer.premium-footer .footer-form .form-card .contact-form textarea::placeholde
   box-shadow: 0 6px 18px rgba(212, 175, 55, 0.55);
 }
 
+.calendar-embed {
+  width: 100%;
+  height: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background: #fff;
+}
+
+.calendar-embed iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .booking-section {
