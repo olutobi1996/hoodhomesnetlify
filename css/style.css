@@ -1389,3 +1389,12 @@ footer.premium-footer .footer-form .form-card .contact-form textarea::placeholde
   }
 }
 
+.property-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.property-card-large {
+  width: 100%;
+}
