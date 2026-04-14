@@ -1,464 +1,355 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Services | Hood Homes</title>
+    <title>Services | Hood Homes</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+    <!-- Bootstrap Template Fonts -->
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-  <!-- Load Head image -->
-  <link rel="preload" as="image" href="/images/Cambridge1.jpg">
-</head>
-<header>
-  <nav class="navbar">
-    <div class="logo">
-      <div class="logo-stack corner-logo">
-        <span class="hh">HH</span>
-        <span class="hood-homes">Hood Homes</span>
+  </head>
+
+  <body>
+
+    <!-- Mobile Menu -->
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="site-nav">
+      <div class="container">
+        <div class="menu-bg-wrap">
+          <div class="site-navigation">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo m-0 float-start">
+              <span class="hh">HH</span> Hood Homes
+            </a>
+
+            <!-- MENU -->
+            <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+              <li class="active"><a href="/index.html">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/properties.html">Bookings</a></li>
+              <li><a href="/blog/blog.html">Blog</a></li>
+              <li><a href="/gallery.html">Gallery</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+
+            <!-- MOBILE BURGER -->
+            <a
+              href="#"
+              class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+            >
+              <span></span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<div
+  class="hero page-inner overlay"
+  style="background-image: url('images/Cambridge13.jpg')"
+>
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-9 text-center mt-5">
+        <h1 class="heading" data-aos="fade-up">Services</h1>
+
+        <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+          <ol class="breadcrumb text-center justify-content-center">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active text-white-50" aria-current="page">
+              Services
+            </li>
+          </ol>
+        </nav>
       </div>
     </div>
-
-    <div class="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-
-    <ul class="nav-links">
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/services.html">Services</a></li>
-      <li><a href="/properties.html">Bookings</a></li>
-      <li><a href="/blog/blog.html">Blog</a></li>
-      <li><a href="/gallery.html">Gallery</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<body>
-
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-slideshow">
-    <img id="hero-img" src="/images/Cambridge1.jpg" alt="Hero image">
-  </div>
-
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1 class="hero-title logo-stack">
-      <span class="hh">HH</span>
-      <span class="hood-homes">Our Services</span>
-    </h1>
-    <p class="hero-subtitle">
-      Professional Sales, Lettings & Property Management
-    </p>
-    <a href="/contact.html" class="cta-button">
-      Book a Valuation
-    </a>
-  </div>
-</section>
-
-<!-- Swiper Gallery -->
-<section class="services-gallery container">
-  <h2 class="section-heading">Our Work in Cambridge</h2>
-
-    <div class="gallery-track">
-      <img src="/images/35_Knightly_Avenue_10.jpg" alt="Property 1">
-      <img src="/images/35_Knightly_Avenue_2.jpg" alt="Property 2">
-      <img src="/images/35_Knightly_Avenue_27.jpg" alt="Property 3">
-      <img src="/images/Cambridge17.jpg" alt="Property 4">
-      <img src="/images/Cambridge18.jpg" alt="Property 5">
-      <img src="/images/Cambridge16.jpg" alt="Property 6">
-      <!-- duplicate for seamless loop -->
-      <img src="/images/48_Hillfield_Comberton_35.jpg" alt="Property 1">
-      <img src="/images/48_Hillfield_Comberton_37.jpg" alt="Property 2">
-      <img src="/images/48_Hillfield_Comberton_4.jpg" alt="Property 3">
-      <img src="/images/48_Hillfield_Comberton_41.jpg" alt="Property 4">
-      <img src="/images/Cambridge15.jpg" alt="Property 5">
-      <img src="/images/Cambridge11.jpg" alt="Property 6">
-    </div>
-  </section>
-
-<!-- Services Section -->
-<section class="split-section">
-  <div class="split-text" data-aos="fade-left" data-aos-delay="100">
-    <div class="split-text-box">
-      <h2 class="section-heading">Property Lettings & Management</h2>
-      <p>
-        We take care of the entire lettings process — from marketing your property and securing quality tenants,
-        to managing every detail of the tenancy. This includes rent collection, maintenance coordination,
-        compliance checks, and regular inspections, so you can enjoy the returns without the stress.
-      </p>
-      <p>
-        With the Renters Reform Bill set to bring major changes to tenancy laws, now more than ever landlords
-        need an agent who understands the legislation and can keep them compliant while still protecting their
-        interests.
-        We stay ahead of regulatory changes so you don’t get caught out, ensuring your property remains
-        profitable and legally secure.
-      </p>
-    </div>
-  </div>
-  <div class="split-image" data-aos="fade-right" data-aos-delay="200">
-    <img src="/images/Cambridge11.jpg" alt="Lettings Service">
-  </div>
-</section>
-
-<section class="split-section">
-  <div class="split-text" data-aos="fade-right" data-aos-delay="100">
-    <div class="split-text-box">
-      <h2 class="section-heading">Property Sales</h2>
-      <p>
-        We don’t just “list and wait” — we use modern, targeted sales methods designed to get your property
-        noticed by motivated buyers. This includes high-quality marketing, strategic online exposure, and strong
-        negotiation to achieve the best possible sale price in the shortest timeframe.
-      </p>
-      <p>
-        Every property is unique, so we tailor our sales strategy to its strengths and the current market
-        conditions.
-        From the first viewing to completion, we keep you informed and in control, ensuring your sale is handled
-        with the professionalism and energy it deserves.
-      </p>
-    </div>
-  </div>
-  <div class="split-image" data-aos="fade-left" data-aos-delay="200">
-    <img src="/images/Cambridge12.jpg" alt="Sales Service">
-  </div>
-</section>
-
-<section class="split-section">
-  <div class="split-text" data-aos="fade-left" data-aos-delay="100">
-    <div class="split-text-box">
-      <h2 class="section-heading">Property Investment</h2>
-      <p>
-        From sourcing high-potential opportunities to analysing the numbers and negotiating the deal,
-        we help you make informed investment decisions that perform in the real world.
-        Once your purchase is secured, we manage the entire refurbishment or conversion process from start to
-        finish.
-      </p>
-      <p>
-        We work with a network of trusted, long-standing contractors and specialists who share our commitment to
-        quality,
-        ensuring every project is completed to the highest standard, on time, and on budget.
-        Whether you’re building a portfolio or adding value to a single property, we make the process smooth,
-        efficient, and profitable.
-      </p>
-    </div>
-  </div>
-  <div class="split-image" data-aos="fade-right" data-aos-delay="200">
-    <img src="/images/Cambridge13.jpg" alt="Investment Service">
-  </div>
-</section>
-
-   <div class="container">
-<!-- Why Choose Us -->
-<section class="why-choose" data-aos="fade-up">
-    <h2 class="section-heading text-center">Why Choose Hood Homes</h2>
-
-    <div class="reasons-grid">
-
-        <!-- Row 1 -->
-        <div class="reason-row">
-            <div class="reason-item" data-aos="zoom-in" data-aos-delay="100">
-                <div class="reason-icon"><i class="fa-solid fa-handshake"></i></div>
-                <h3>Trusted Partnership</h3>
-                <p>We build every client relationship on trust and transparency, guiding you at every step.</p>
-            </div>
-
-            <div class="reason-item" data-aos="zoom-in" data-aos-delay="200">
-                <div class="reason-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                <h3>Proven Expertise</h3>
-                <p>Years of experience in lettings, sales, and investments give you the Cambridge market edge.</p>
-            </div>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="reason-row">
-            <div class="reason-item" data-aos="zoom-in" data-aos-delay="300">
-                <div class="reason-icon"><i class="fa-solid fa-life-ring"></i></div>
-                <h3>Safe Hands</h3>
-                <p>Your property stays secure and compliant with our expert, up-to-date guidance.</p>
-            </div>
-
-            <div class="reason-item" data-aos="zoom-in" data-aos-delay="400">
-                <div class="reason-icon"><i class="fa-solid fa-cloud-upload"></i></div>
-                <h3>Modern Technology</h3>
-                <p>From digital marketing to online bookings, we make the process simple and effective.</p>
-            </div>
-        </div>
-
-        <!-- Row 3 -->
-        <div class="reason-row">
-            <div class="reason-item" data-aos="zoom-in" data-aos-delay="500">
-                <div class="reason-icon"><i class="fa-solid fa-users"></i></div>
-                <h3>Personal Service</h3>
-                <p>We listen, adapt, and tailor solutions to deliver truly bespoke results.</p>
-            </div>
-        </div>
-
-    </div>
-
-<!-- Areas Covered -->
-<section class="areas-covered container" data-aos="fade-up">
-    <h2 class="section-heading">Areas Covered</h2>
-    <div class="areas-grid">
-        <div class="area-box" data-aos="fade-up" data-aos-delay="100">
-            <h3>Cambridge City Centre</h3>
-            <p>
-                The city centre blends historic architecture with modern convenience, offering a lifestyle that is both
-                dynamic and charming.
-                From grand Victorian terraces and elegant Edwardian homes to stylish new-build apartments, the centre
-                attracts a wide mix of residents including academics, professionals, investors, and students.
-                With world-famous colleges, museums, cultural landmarks, and a thriving café and dining scene on the
-                doorstep, living here means being immersed in the unique character of Cambridge.
-                Excellent transport connections and access to employment hubs make it one of the most desirable areas in
-                the region.
-            </p>
-        </div>
-
-        <div class="area-box" data-aos="fade-up" data-aos-delay="200">
-            <h3>South Cambridge</h3>
-            <p>
-                South Cambridge offers a quieter pace of life with attractive residential streets, excellent schools,
-                and proximity to Addenbrooke’s Hospital and the Biomedical Campus.
-                It is particularly popular with medical professionals, academics, and families who value the strong
-                sense of community and abundance of green spaces.
-                Local amenities include shops, cafés, and easy access to countryside walks, while excellent bus and
-                train links make commuting straightforward.
-                With strong demand from both buyers and renters, property in South Cambridge has proven to be a sound
-                long-term investment.
-            </p>
-        </div>
-
-        <div class="area-box" data-aos="fade-up" data-aos-delay="300">
-            <h3>Eddington</h3>
-            <p>
-                Eddington is Cambridge’s flagship modern development, designed with sustainability and community at its
-                heart.
-                Built with eco-friendly housing, energy-efficient infrastructure, and landscaped green spaces, it is a
-                forward-thinking district that sets a new standard for urban living.
-                Families, academics, and young professionals are drawn to its new schools, cycle-friendly layout, and
-                strong links to the University of Cambridge.
-                With modern design and future-proof planning, Eddington is fast becoming one of the most distinctive
-                neighbourhoods in the city.
-            </p>
-        </div>
-
-        <div class="area-box" data-aos="fade-up" data-aos-delay="400">
-            <h3>North Cambridge</h3>
-            <p>
-                North Cambridge combines traditional terraced streets with exciting new residential developments, making
-                it attractive to a diverse range of buyers and tenants.
-                Its appeal has grown significantly with the opening of Cambridge North Station, providing quick
-                connections to London and beyond.
-                The area also benefits from local shops, schools, and community spaces, alongside future regeneration
-                projects that continue to add value.
-                With growing demand from commuters, professionals, and investors, North Cambridge is one of the city’s
-                fastest-rising areas.
-            </p>
-        </div>
-
-        <div class="area-box" data-aos="fade-up" data-aos-delay="500">
-            <h3>Milton & Waterbeach</h3>
-            <p>
-                Just to the north of Cambridge, Milton and Waterbeach are thriving communities that combine riverside
-                charm with excellent transport links.
-                Both areas are well-connected by road and rail, making them particularly attractive to commuters, while
-                offering larger homes and more outdoor space than the city centre.
-                Local parks, schools, and village amenities provide a family-friendly environment, and ongoing
-                development plans in Waterbeach promise to bring even greater opportunities.
-                With a balance of traditional village character and exciting growth, they continue to draw strong
-                interest from buyers and investors.
-            </p>
-        </div>
-
-        <div class="area-box" data-aos="fade-up" data-aos-delay="600">
-            <h3>The Villages</h3>
-            <p>
-                Surrounding Cambridge are a wealth of picturesque villages, each offering something unique to buyers
-                seeking charm and space.
-                Grantchester, Coton, Comberton, and Barton are just a few examples where residents enjoy a countryside
-                lifestyle within minutes of the city.
-                Properties range from historic period cottages and barn conversions to modern family homes, with many
-                set in scenic locations.
-                For those wanting tranquillity without sacrificing convenience, the villages provide the perfect balance
-                of rural beauty and access to Cambridge’s opportunities.
-            </p>
-        </div>
-
-        <div class="area-box" data-aos="fade-up" data-aos-delay="700">
-            <h3>Histon & Impington</h3>
-            <p>
-                Histon and Impington are neighbouring villages that have grown into some of the most sought-after
-                locations around Cambridge.
-                Known for their excellent schools, welcoming community, and strong transport connections, they appeal
-                especially to families and professionals.
-                The villages have a vibrant local scene with independent shops, pubs, and regular events that foster a
-                close-knit atmosphere.
-                With a diverse mix of housing — from period properties to modern developments — they offer something for
-                every stage of life while maintaining consistently high demand.
-            </p>
-        </div>
-    </div>
-</section>
-
-</section>
-</div>
-
-<footer id="main-footer" class="footer premium-footer hidden-footer">
-
-  <div class="footer-glow-box">
-    <div class="footer-container container">
-
-      <!-- Left: Company Info -->
-      <div class="footer-info">
-        <h3>Talk To Us</h3>
-        <p>We’d love to hear from you. Reach out for property advice, valuations, or enquiries.</p>
-
-        <h4>Our Office</h4>
-
-        <p>5 Valiant Lane, Cambridge, CB5 8XB</p>
-
-        <p><strong>Call:</strong>
-          <a href="tel:07841519614">07841 519 614</a>
-        </p>
-
-        <p><strong>Email:</strong>
-          <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a>
-        </p>
-
-        <p>
-          <a href="https://www.facebook.com/" target="_blank">Follow us on Facebook</a>
-        </p>
-      </div>
-
-  <!-- Footer Form Column -->
- <div class="footer-form">
-  <h4>Send us a message</h4>
-  <div class="form-card">
-    <form
-      name="footer-contact"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      class="contact-form"
-       action="/thank-you.html"
-    >
-      <input type="hidden" name="form-name" value="footer-contact">
-      <input type="hidden" name="bot-field">
-
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="tel" name="phone" placeholder="Phone">
-      <input type="email" name="email" placeholder="Email Address" required>
-      <textarea name="message" placeholder="Message" rows="3" required></textarea>
-
-      <div class="consent-box">
-        <input type="checkbox" name="consent" required>
-        <label>I consent to an agent of Hood Homes contacting me.</label>
-      </div>
-
-      <button type="submit" class="cta-button">Submit</button>
-    </form>
   </div>
 </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom-bar">
+<!-- SERVICES GRID -->
+<div class="section bg-light">
+  <div class="container">
+    <div class="row">
 
-      <!-- Partner Logos -->
-      <div class="logos-scroll-wrapper">
-           <ul class="partner-logos-scroll">
-          <li><img src="/images/zoopla.svg" alt="Zoopla"></li>
-          <li><img src="/images/rightmove.svg" alt="Rightmove"></li>
-          <li><img src="/images/the-property-ombudsman.svg" alt="Ombudsman"></li>
-          <li class="logo-large">
-                 <li><img src="/images/airbnb.svg" alt="Airbnb"></li>
-      <li><img src="/images/booking.com.svg" alt="Booking.com"></li>
-  <img src="/images/clientmoneyprotection.png" alt="Client Money Protect">
-</li>
-<li class="logo-large">
-  <img src="/images/depositprotection.jpg" alt="Deposit Protection Service">
-</li>
-          <li><img src="/images/tds.svg" alt="TDS"></li>
-          <!-- Duplicate set (REQUIRED) -->
-             <li><img src="/images/zoopla.svg" alt="Zoopla"></li>
-          <li><img src="/images/rightmove.svg" alt="Rightmove"></li>
-          <li><img src="/images/the-property-ombudsman.svg" alt="Ombudsman"></li>
-          <li class="logo-large">
-  <img src="/images/clientmoneyprotection.png" alt="Client Money Protect">
-</li>
-     <li><img src="/images/airbnb.svg" alt="Airbnb"></li>
-      <li><img src="/images/booking.com.svg" alt="Booking.com"></li>
-<li class="logo-large">
-  <img src="/images/depositprotection.jpg" alt="Deposit Protection Service">
-</li>
-          <li><img src="/images/tds.svg" alt="TDS"></li>
-        </ul>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="box-feature mb-4">
+          <span class="flaticon-house mb-4 d-block"></span>
+          <h3 class="text-black mb-3 font-weight-bold">
+            Property Lettings & Management
+          </h3>
+          <p class="text-black-50">
+            Full lettings service including marketing, tenant sourcing, rent collection,
+            maintenance coordination, inspections, and full compliance management.
+            We keep landlords protected and profitable while handling everything end-to-end.
+          </p>
+        </div>
       </div>
 
-      <!-- Legal -->
-      <div class="footer-legal-links">
-        <p>
-          <a href="/privacy-policy.html">Privacy Policy</a> |
-          <a href="/terms-and-conditions.html">Terms & Conditions</a> |
-          <a href="/cookies.html">Cookies</a>
-        </p>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="box-feature mb-4">
+          <span class="flaticon-house-2 mb-4 d-block-3"></span>
+          <h3 class="text-black mb-3 font-weight-bold">
+            Property Sales
+          </h3>
+          <p class="text-black-50">
+            Strategic, modern sales approach designed to achieve the best price in the shortest time.
+            We use targeted marketing, strong negotiation, and tailored strategy for every property.
+          </p>
+        </div>
+      </div>
 
-        <p class="footer-bottom">
-          &copy; 2026 Hood Homes. All Rights Reserved.
-        </p>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+        <div class="box-feature mb-4">
+          <span class="flaticon-building mb-4 d-block"></span>
+          <h3 class="text-black mb-3 font-weight-bold">
+            Property Investment
+          </h3>
+          <p class="text-black-50">
+            We source, analyse, and negotiate investment opportunities with strong returns.
+            From acquisition to refurbishment and management, we handle the full process for investors.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+        <div class="box-feature mb-4">
+          <span class="flaticon-house-3 mb-4 d-block-1"></span>
+          <h3 class="text-black mb-3 font-weight-bold">
+            Compliance & Legislation
+          </h3>
+          <p class="text-black-50">
+            With major rental law changes including the Renters Reform Bill,
+            we ensure landlords stay fully compliant while protecting their investments and income.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="box-feature mb-4">
+          <span class="flaticon-house-4 mb-4 d-block"></span>
+          <h3 class="text-black mb-3 font-weight-bold">
+            Marketing & Exposure
+          </h3>
+          <p class="text-black-50">
+            High-quality digital marketing, strong online presence, and targeted exposure
+            to attract serious buyers and tenants quickly and effectively.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="box-feature mb-4">
+          <span class="flaticon-building mb-4 d-block-3"></span>
+          <h3 class="text-black mb-3 font-weight-bold">
+            Negotiation & Deal Management
+          </h3>
+          <p class="text-black-50">
+            We handle negotiations with a focus on maximising value and reducing risk,
+            ensuring the best outcome from offer through to completion.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+        <div class="box-feature mb-4">
+          <span class="flaticon-house mb-4 d-block"></span>
+          <h3 class="text-black mb-3 font-weight-bold">
+            Personal Service
+          </h3>
+          <p class="text-black-50">
+            A hands-on, tailored approach where every client receives direct communication,
+            clear advice, and a service built around their goals.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+        <div class="box-feature mb-4">
+          <span class="flaticon-house-1 mb-4 d-block-1"></span>
+          <h3 class="text-black mb-3 font-weight-bold">
+            Cambridge Coverage
+          </h3>
+          <p class="text-black-50">
+            Covering Cambridge City Centre, South Cambridge, North Cambridge,
+            Eddington, Milton, Waterbeach, and surrounding villages.
+          </p>
+        </div>
       </div>
 
     </div>
   </div>
-</footer>
+</div>
 
-<!-- JS Libraries -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-<script src="/js/script.js"></script>
-<script>
-  const heroImages = [
-    "/images/Cambridge1.jpg",
-    "/images/Cambridge5.jpg",
-    "/images/Cambridge3.jpg",
-    "/images/Cambridge4.jpg"
-  ];
 
-  let currentIndex = 0;
-  const heroImg = document.getElementById("hero-img");
+ 
+ <!-- Reviews Section -->
+<div class="section sec-testimonials">
+  <div class="container">
 
-  // Show image once first load completes
-  heroImg.onload = () => {
-    heroImg.classList.add("loaded");
-  };
+    <div class="row mb-5 align-items-center">
+      <div class="col-md-6">
+        <h2 class="font-weight-bold heading text-primary mb-4 mb-md-0">
+          What Our Customers Say
+        </h2>
+      </div>
+    </div>
 
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % heroImages.length;
-    heroImg.classList.add("fade-out");
+    <!-- Elfsight Google Reviews -->
+    <div class="row">
+      <div class="col-12">
 
-    setTimeout(() => {
-      heroImg.src = heroImages[currentIndex];
-      heroImg.classList.remove("fade-out");
-    }, 500);
-  }, 5000);
-</script>
+        <div class="reviews-wrapper">
 
-</body>
+          <!-- Elfsight Script -->
+          <script src="https://elfsightcdn.com/platform.js" async></script>
+
+          <!-- Your Widget -->
+          <div class="elfsight-app-59ad06f7-a2e4-4355-8d21-5b4bf5f34470" data-elfsight-app-lazy></div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="site-footer">
+  <div class="container">
+    <div class="row">
+
+      <!-- Contact -->
+      <div class="col-lg-4">
+        <div class="widget">
+          <h3>Contact</h3>
+          <address>5 Valiant Lane, Cambridge, CB5 8XB</address>
+
+          <ul class="list-unstyled links">
+            <li><a href="tel:07841519614">07841 519 614</a></li>
+            <li><a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4">
+        <div class="widget">
+          <h3>Quick Links</h3>
+
+          <ul class="list-unstyled float-start links">
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/properties.html">Properties</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+
+          <ul class="list-unstyled float-start links">
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-and-conditions.html">Terms</a></li>
+            <li><a href="/cookies.html">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div class="col-lg-4">
+        <div class="widget">
+          <h3>Follow Us</h3>
+
+          <ul class="list-unstyled social">
+            <li><a href="#"><span class="icon-facebook"></span></a></li>
+            <li><a href="#"><span class="icon-instagram"></span></a></li>
+            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Partner Logos Scroll (KEEP THIS 🔥) -->
+    <div class="logos-scroll-wrapper mt-5">
+      <ul class="partner-logos-scroll">
+        <li><img src="/images/zoopla.svg"></li>
+        <li><img src="/images/rightmove.svg"></li>
+        <li><img src="/images/the-property-ombudsman.svg"></li>
+        <li><img src="/images/airbnb.svg"></li>
+        <li><img src="/images/booking.com.svg"></li>
+        <li><img src="/images/clientmoneyprotection.png"></li>
+        <li><img src="/images/depositprotection.jpg"></li>
+        <li><img src="/images/tds.svg"></li>
+
+        <!-- duplicate for smooth scroll -->
+        <li><img src="/images/zoopla.svg"></li>
+        <li><img src="/images/rightmove.svg"></li>
+        <li><img src="/images/the-property-ombudsman.svg"></li>
+        <li><img src="/images/airbnb.svg"></li>
+        <li><img src="/images/booking.com.svg"></li>
+        <li><img src="/images/clientmoneyprotection.png"></li>
+        <li><img src="/images/depositprotection.jpg"></li>
+        <li><img src="/images/tds.svg"></li>
+      </ul>
+    </div>
+
+    <!-- Bottom -->
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <p>
+          © <script>document.write(new Date().getFullYear());</script>
+          Hood Homes. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/tiny-slider.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/custom.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
 </html>
