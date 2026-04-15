@@ -83,7 +83,7 @@
         <h1 class="heading" data-aos="fade-up">Contact Hood Homes</h1>
 
         <p class="text-white-50" data-aos="fade-up" data-aos-delay="100">
-          Your Cambridge Property Expert — speak directly with Joe Hood
+          Your Cambridge Property Expert, speak directly with Joe Hood
         </p>
 
         <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
@@ -98,47 +98,121 @@
   </div>
 </div>
 
-<div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+<!-- HOME / CTA SECTION (HOOD HOMES VERSION) -->
+<section id="home-section" class="hood-home-cta py-5">
 
-  <div class="contact-info">
+  <div class="dark-overlay"></div>
 
-    <div class="address mt-2">
-      <i class="icon-room"></i>
-      <h4 class="mb-2">Office</h4>
-      <p>
-        5 Valiant Lane,<br>
-        Cambridge, CB5 8XB
-      </p>
-    </div>
+  <div class="home-inner container">
 
-    <div class="phone mt-4">
-      <i class="icon-phone"></i>
-      <h4 class="mb-2">Call</h4>
-      <p>
-        <a href="tel:07841519614">07841 519 614</a>
-      </p>
-    </div>
+    <div class="row align-items-center">
 
-    <div class="email mt-4">
-      <i class="icon-envelope"></i>
-      <h4 class="mb-2">Email</h4>
-      <p>
-        <a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a>
-      </p>
-    </div>
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-7">
 
-    <div class="open-hours mt-4">
-      <i class="icon-clock-o"></i>
-      <h4 class="mb-2">Availability</h4>
-      <p>
-        Monday – Saturday<br>
-        9:00 AM – 6:00 PM
-      </p>
+        <h1 class="display-4 mb-4">
+          Expert <strong>Cambridge Property Advice</strong> & High-Performing
+          <strong>Investment Strategy</strong>
+        </h1>
+
+        <p class="mb-4 text-white-50">
+          At Hood Homes, we help landlords, investors, and homeowners maximise value through
+          expert lettings, sales, and property management across Cambridge and surrounding areas.
+        </p>
+
+        <!-- FEATURE POINTS -->
+        <div class="d-flex mb-3">
+          <div class="p-2 align-self-start">
+            <i class="fas fa-check fa-2x text-primary bg-white p-2 rounded"></i>
+          </div>
+          <div class="p-2 align-self-end">
+            Accurate rental valuations based on real local demand
+          </div>
+        </div>
+
+        <div class="d-flex mb-3">
+          <div class="p-2 align-self-start">
+            <i class="fas fa-check fa-2x text-primary bg-white p-2 rounded"></i>
+          </div>
+          <div class="p-2 align-self-end">
+            Full property management with compliance and tenant care
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="p-2 align-self-start">
+            <i class="fas fa-check fa-2x text-primary bg-white p-2 rounded"></i>
+          </div>
+          <div class="p-2 align-self-end">
+            Investment strategies tailored to maximise long-term returns
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="col-lg-5 mt-5 mt-lg-0">
+
+        <div class="card bg-white text-dark shadow-lg card-form">
+
+          <div class="card-body">
+
+            <h3 class="text-center mb-2">Book a Valuation</h3>
+            <p class="text-center text-muted mb-4">
+              Get expert advice within 24 hours
+            </p>
+
+            <!-- NETLIFY FORM -->
+            <form name="footer-contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field">
+
+              <input type="hidden" name="form-name" value="footer-contact">
+
+              <div class="form-group mb-3">
+                <input type="text" name="name" class="form-control form-control-lg"
+                       placeholder="Full Name" required>
+              </div>
+
+              <div class="form-group mb-3">
+                <input type="tel" name="phone" class="form-control form-control-lg"
+                       placeholder="Phone Number">
+              </div>
+
+              <div class="form-group mb-3">
+                <input type="email" name="email" class="form-control form-control-lg"
+                       placeholder="Email Address" required>
+              </div>
+
+              <div class="form-group mb-3">
+                <textarea name="message" class="form-control form-control-lg"
+                          placeholder="Tell us about your property..." rows="4"></textarea>
+              </div>
+
+              <div class="form-group mb-3">
+                <label class="small">
+                  <input type="checkbox" name="consent" required>
+                  I agree to be contacted by Hood Homes
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block w-100">
+                Submit Enquiry
+              </button>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
+</section>
 
-</div>
 
 <div class="site-footer">
   <div class="container">
