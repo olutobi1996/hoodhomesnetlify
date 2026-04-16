@@ -10541,16 +10541,15 @@ body {
   color: #000; /* black hover */
 }
 
-/* MOBILE MENU */
 .site-mobile-menu {
   position: fixed;
   top: 0;
   right: 0;
   width: 280px;
   height: 100%;
-  background: #ffffff; /* WHITE */
+  background: #fff !important;
   transform: translateX(100%);
-  transition: 0.3s;
+  transition: 0.3s ease;
   z-index: 9999;
   padding: 20px;
 }
@@ -10598,6 +10597,38 @@ body {
   background: #bfa46f;
   border-radius: 5px;
 }
+
 body.offcanvas-menu .site-mobile-menu {
   transform: translateX(0);
+}
+
+.site-mobile-menu a,
+.site-mobile-menu a:link,
+.site-mobile-menu a:visited {
+  color: #d4af37 !important;
+  font-size: 18px;
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+.site-mobile-menu a:hover {
+  color: #000 !important;
+  background: #d4af37;
+  border-radius: 5px;
+}
+.site-mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-mobile-menu li {
+  display: block;
+}
+.site-mobile-menu-close {
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+  text-align: right;
 }
