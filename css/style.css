@@ -10632,3 +10632,56 @@ body.offcanvas-menu .site-mobile-menu {
   cursor: pointer;
   text-align: right;
 }
+.property-item {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.propertySwiper img {
+  border-radius: 0;
+}
+
+iframe {
+  border-radius: 12px;
+}
+
+.card {
+  border-radius: 16px;
+}
+.gallery-wrapper {
+  overflow: hidden;
+}
+
+.gallery-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item {
+  flex: 0 0 33.333%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.gallery-arrow.left { left: 10px; }
+.gallery-arrow.right { right: 10px; }

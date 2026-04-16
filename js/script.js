@@ -139,3 +139,27 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCarousel();
     }, 4000);
 });
+
+ document.addEventListener("DOMContentLoaded", () => {
+
+  const checkinEl = document.querySelector("#checkin");
+  const checkoutEl = document.querySelector("#checkout");
+
+  if (!checkinEl || !checkoutEl) return;
+
+  const checkout = flatpickr("#checkout", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+
+  const checkin = flatpickr("#checkin", {
+    dateFormat: "Y-m-d",
+    minDate: "today",
+    onChange: function(selectedDates) {
+      if (selectedDates.length) {
+        checkout.set("minDate", selectedDates[0]);
+      }
+    }
+  });
+
+});

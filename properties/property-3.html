@@ -1,274 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Bailey Avenue | Hood Homes</title>
+    <title>Bailey Avenue | Hood Homes</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+        <!-- Bootstrap Template Fonts -->
+    <link rel="stylesheet" href="/css/tiny-slider.css" />
+<link rel="stylesheet" href="/css/aos.css" />
+<link rel="stylesheet" href="/css/style.css" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="/fonts/icomoon/style.css" />
+<link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <!-- Load Head image -->
-  <link rel="preload" as="image" href="/images/Cambridge1.jpg">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css"
-/>
+  </head>
 
-</head>
+  <body>
+
+   <!-- Mobile Menu -->
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="site-nav">
+      <div class="container">
+        <div class="menu-bg-wrap">
+          <div class="site-navigation">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo m-0 float-start">
+  <img src="/images/hoodhomes.png" alt="Hood Homes Logo" class="site-logo">
+</a>
+            <!-- MENU -->
+            <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+              <li class="active"><a href="/index.html">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/properties.html">Bookings</a></li>
+              <li><a href="/blog/blog.html">Blog</a></li>
+              <li><a href="/gallery.html">Gallery</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+
+            <a href="#" class="burger js-menu-toggle d-inline-block d-lg-none float-end">
+  <span></span>
+</a>
+</div>
+        </div>
+      </div>
+    </nav>
+
+
 <body>
 
-  <!-- Header / Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <div class="logo-stack corner-logo">
-          <span class="hh">HH</span>
-          <span class="hood-homes">Hood Homes</span>
+<!-- Hero Section (Untree Style Adapted) -->
+<div
+  class="hero page-inner overlay"
+  style="background-image: url('/images/Cambridge15.jpg')"
+>
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-9 text-center mt-5">
+
+        <h1 class="heading" data-aos="fade-up">
+          Properties
+        </h1>
+
+        <p class="text-white-50 mt-3" data-aos="fade-up" data-aos-delay="150">
+          Browse available homes to buy and rent across Cambridge and surrounding villages, carefully selected by Hood Homes.
+        </p>
+
+        <div data-aos="fade-up" data-aos-delay="250">
+          <a href="/contact.html" class="btn btn-primary py-3 px-4 mt-3">
+            Book a Valuation
+          </a>
+        </div>
+
+        <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="350">
+          <ol class="breadcrumb text-center justify-content-center mt-4">
+            <li class="breadcrumb-item">
+              <a href="/index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active text-white-50" aria-current="page">
+              Properties
+            </li>
+          </ol>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section pt-5" style="padding-top:120px;" data-aos="fade-up">
+  <div class="container text-center">
+
+    <h1 class="heading text-primary mb-3">Bailey Avenue</h1>
+
+    <p class="text-black-50">
+      A charming Cambridge home with stylish interiors and a welcoming feel, perfectly suited for comfortable modern living.
+    </p>
+
+  </div>
+</section>
+
+<section class="section bg-light py-5" data-aos="fade-up">
+  <div class="container">
+
+    <div class="text-center mb-4">
+      <h2 class="heading text-primary">Property Gallery</h2>
+      <p class="text-black-50">Beautiful Cambridge residence details</p>
+    </div>
+
+    <div class="gallery-wrapper position-relative overflow-hidden">
+
+      <div class="gallery-carousel d-flex" id="gallery2"></div>
+
+      <button class="gallery-arrow left" data-target="gallery2">‹</button>
+      <button class="gallery-arrow right" data-target="gallery2">›</button>
+
+    </div>
+
+  </div>
+</section>
+<section class="section py-5" data-aos="fade-up">
+  <div class="container">
+
+    <div class="text-center mb-4">
+      <h2 class="heading text-primary">Availability</h2>
+      <p class="text-black-50">Live booking calendar</p>
+    </div>
+
+    <div class="property-item shadow-lg rounded-4 overflow-hidden">
+
+      <div class="property-content p-4">
+
+        <div class="price mb-2">
+          <span>Google Calendar</span>
+        </div>
+
+        <span class="d-block mb-3 text-black-50">
+          Check live availability for Bailey Avenue
+        </span>
+
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=b353590ad17ed282476b20ba7c2dd9f83c96f84440a22705c47968bb48538040%40group.calendar.google.com&ctz=Europe%2FLondon&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showCalendars=0&showTz=0"
+          style="border:0; width:100%; height:500px; border-radius:12px;"
+          loading="lazy">
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section bg-light py-5" data-aos="fade-up">
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-6">
+
+        <div class="card bg-white shadow-lg border-0 rounded-4">
+
+          <div class="card-body p-4">
+
+            <h3 class="text-center mb-2">Request Booking</h3>
+            <p class="text-center text-muted mb-4">
+              Check availability and send a booking request
+            </p>
+
+            <form name="booking" method="POST" data-netlify="true">
+
+              <input type="hidden" name="form-name" value="booking">
+              <input type="hidden" name="property" value="Oldfields Cottage">
+
+              <div class="form-group mb-3">
+                <input id="checkin" type="text" class="form-control form-control-lg"
+       placeholder="Check-in date" readonly>
+              </div>
+
+              <div class="form-group mb-3">
+                <input id="checkout" type="text" class="form-control form-control-lg"
+       placeholder="Check-out date" readonly>
+              </div>
+
+              <div class="form-group mb-3">
+                <input type="text" name="name" class="form-control form-control-lg"
+                       placeholder="Full Name" required>
+              </div>
+
+              <div class="form-group mb-3">
+                <input type="email" name="email" class="form-control form-control-lg"
+                       placeholder="Email Address" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 btn-lg">
+                Request Booking
+              </button>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<div class="site-footer">
+  <div class="container">
+    <div class="row">
+
+      <!-- Contact -->
+      <div class="col-lg-4">
+        <div class="widget">
+          <h3>Contact</h3>
+          <address>5 Valiant Lane, Cambridge, CB5 8XB</address>
+
+          <ul class="list-unstyled links">
+            <li><a href="tel:07841519614">07841 519 614</a></li>
+            <li><a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="hamburger">
-        <span></span><span></span><span></span>
+      <!-- Quick Links -->
+      <div class="col-lg-4">
+        <div class="widget">
+          <h3>Quick Links</h3>
+
+          <ul class="list-unstyled float-start links">
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/properties.html">Properties</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+
+          <ul class="list-unstyled float-start links">
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-and-conditions.html">Terms</a></li>
+            <li><a href="/cookies.html">Cookies</a></li>
+          </ul>
+        </div>
       </div>
 
-      <ul class="nav-links">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/properties.html">Bookings</a></li>
-        <li><a href="/blog/blog.html">Blog</a></li>
-        <li><a href="/gallery.html">Gallery</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+      <!-- Social -->
+      <div class="col-lg-4">
+        <div class="widget">
+          <h3>Follow Us</h3>
+
+          <ul class="list-unstyled social">
+            <li><a href="https://www.instagram.com/jhoodhomes/"><span class="icon-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Partner Logos Scroll (KEEP THIS 🔥) -->
+    <div class="logos-scroll-wrapper mt-5">
+      <ul class="partner-logos-scroll">
+        <li><img src="/images/zoopla.svg"></li>
+        <li><img src="/images/rightmove.svg"></li>
+        <li><img src="/images/the-property-ombudsman.svg"></li>
+        <li><img src="/images/airbnb.svg"></li>
+        <li><img src="/images/booking.com.svg"></li>
+        <li><img src="/images/clientmoneyprotection.png"></li>
+        <li><img src="/images/depositprotection.jpg"></li>
+        <li><img src="/images/tds.svg"></li>
+
+        <!-- duplicate for smooth scroll -->
+        <li><img src="/images/zoopla.svg"></li>
+        <li><img src="/images/rightmove.svg"></li>
+        <li><img src="/images/the-property-ombudsman.svg"></li>
+        <li><img src="/images/airbnb.svg"></li>
+        <li><img src="/images/booking.com.svg"></li>
+        <li><img src="/images/clientmoneyprotection.png"></li>
+        <li><img src="/images/depositprotection.jpg"></li>
+        <li><img src="/images/tds.svg"></li>
       </ul>
-    </nav>
-  </header>
+    </div>
 
-<section class="blog-section container py-5" class="property-hero" style="padding-top:120px;" data-aos="fade-up">
-  <h1>Bailey Avenue</h1>
-</section>
-
-<!-- Property Gallery: Bailey Avenue -->
-<!-- Bailey Avenue Gallery -->
-<section class="property-gallery container">
-  <div class="swiper baileySwiper">
-    <div class="swiper-wrapper" id="baileyGalleryWrapper"></div>
-
-    <!-- Controls -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
-<section class="availability-section container">
-  <h2>Availability</h2>
-
-  <div class="calendar-embed">
-    <iframe src="https://calendar.google.com/calendar/embed?src=b353590ad17ed282476b20ba7c2dd9f83c96f84440a22705c47968bb48538040%40group.calendar.google.com&ctz=Europe%2FLondon" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-  </div>
-</section>
-<section class="booking-section">
-  <div class="booking-form">
-
-    <h2>Check availability</h2>
-
-    <form name="booking" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="booking">
-
-      <input type="hidden" name="property" value="Oldfields Cottage">
-      <input type="hidden" name="checkin">
-      <input type="hidden" name="checkout">
-
-      <div class="form-group">
-        <label>Check-in</label>
-        <input id="checkin" type="text" placeholder="Select date" readonly>
+    <!-- Bottom -->
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <p>
+          © <script>document.write(new Date().getFullYear());</script>
+          Hood Homes. All Rights Reserved.
+        </p>
       </div>
-
-      <div class="form-group">
-        <label>Check-out</label>
-        <input id="checkout" type="text" placeholder="Select date" readonly>
-      </div>
-
-      <div class="form-group">
-        <label>Full name</label>
-        <input type="text" name="name" required>
-      </div>
-
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" name="email" required>
-      </div>
-
-      <button type="submit" class="cta-button">Request booking</button>
-    </form>
+    </div>
 
   </div>
-</section>
+</div>
 
-
-  <!-- JS Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-
-  <!-- Your Custom JS -->
-  <script src="/js/script.js"></script>
 <script>
-  const heroImages = [
-    "/images/Cambridge1.jpg",
-    "/images/Cambridge2.jpg",
-    "/images/Cambridge3.jpg",
-    "/images/Cambridge4.jpg"
-  ];
+document.addEventListener("DOMContentLoaded", function () {
 
-  let currentIndex = 0;
-  const heroImg = document.getElementById("hero-img");
+  // =========================
+  // GALLERY DATA
+  // =========================
 
-  // Show image once first load completes
-  heroImg.onload = () => {
-    heroImg.classList.add("loaded");
+  const galleryData = {
+    gallery1: [
+      ...Array.from({ length: 6 }, (_, i) => `PHOTO-2026-02-24-14-20-59_${i + 1}.jpg`),
+      ...Array.from({ length: 9 }, (_, i) => `PHOTO-2026-02-24-14-21-00_${i + 1}.jpg`),
+      ...Array.from({ length: 8 }, (_, i) => `PHOTO-2026-02-24-14-21-01_${i + 1}.jpg`)
+    ],
+
+   
+     gallery2: [
+  ...Array.from({ length: 3 }, (_, i) => `PHOTO-2026-02-24-14-24-07_${i + 1}.jpg`),
+  ...Array.from({ length: 9 }, (_, i) => `PHOTO-2026-02-24-14-24-08_${i + 1}.jpg`)
+]
   };
 
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % heroImages.length;
-    heroImg.classList.add("fade-out");
+  // =========================
+  // BUILD GALLERIES
+  // =========================
 
-    setTimeout(() => {
-      heroImg.src = heroImages[currentIndex];
-      heroImg.classList.remove("fade-out");
-    }, 500);
-  }, 5000);
-</script>
+  Object.keys(galleryData).forEach(id => {
+    const container = document.getElementById(id);
 
-<script>
-/* Init Swiper */
-const propertySwiper = new Swiper(".propertySwiper", {
-  loop: true,
-  spaceBetween: 20,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+    galleryData[id].forEach(src => {
+      const div = document.createElement("div");
+      div.className = "gallery-item";
+
+      div.innerHTML = `<img src="/images/${src}" alt="Gallery image">`;
+      container.appendChild(div);
+    });
+  });
+
+  // =========================
+  // SLIDER LOGIC
+  // =========================
+
+  const state = {
+    gallery1: 0,
+    gallery2: 0
+  };
+
+  function update(galleryId) {
+    const carousel = document.getElementById(galleryId);
+    const index = state[galleryId];
+
+    const offset = -(index * (100 / 3));
+    carousel.style.transform = `translateX(${offset}%)`;
   }
-});
 
-/* Lightbox */
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
+  function slide(galleryId, dir) {
+    const total = document.querySelectorAll(`#${galleryId} .gallery-item`).length;
 
-document.querySelectorAll(".propertySwiper img").forEach(img => {
-  img.addEventListener("click", () => {
-    lightboxImg.src = img.src;
-    lightbox.style.display = "flex";
-  });
-});
+    state[galleryId] += dir;
 
-document.querySelector("#lightbox .close").addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
+    if (state[galleryId] < 0) state[galleryId] = 0;
+    if (state[galleryId] > total - 3) state[galleryId] = total - 3;
 
-lightbox.addEventListener("click", e => {
-  if (e.target === lightbox) lightbox.style.display = "none";
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+    update(galleryId);
+  }
 
-  const checkinPicker = flatpickr("#checkin", {
-    minDate: "today",
-    dateFormat: "Y-m-d",
-    clickOpens: true,
-    onChange: function(selectedDates) {
-      document.querySelector("input[name='checkin']").value =
-        selectedDates[0].toISOString().split("T")[0];
+  // =========================
+  // ARROWS
+  // =========================
 
-      checkoutPicker.set("minDate", selectedDates[0]);
-    }
-  });
-
-  const checkoutPicker = flatpickr("#checkout", {
-    minDate: "today",
-    dateFormat: "Y-m-d",
-    clickOpens: true,
-    onChange: function(selectedDates) {
-      document.querySelector("input[name='checkout']").value =
-        selectedDates[0].toISOString().split("T")[0];
-    }
+  document.querySelectorAll(".gallery-arrow").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.target;
+      const dir = btn.classList.contains("left") ? -1 : 1;
+      slide(target, dir);
+    });
   });
 
 });
 </script>
 <script>
-  const baileyGalleryWrapper = document.getElementById("baileyGalleryWrapper");
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".gallery-carousel");
+    const items = document.querySelectorAll(".gallery-item");
+    const prevBtn = document.querySelector(".gallery-arrow.left");
+    const nextBtn = document.querySelector(".gallery-arrow.right");
 
-  const baileySets = [
-    { prefix: "PHOTO-2026-02-24-14-24-07_", count: 3 },
-    { prefix: "PHOTO-2026-02-24-14-24-08_", count: 9 },
-    { prefix: "PHOTO-2026-02-24-14-24-08_10_", count: 12 },
-    { prefix: "PHOTO-2026-02-24-14-24-08", count: 9 },
-  ];
+    const visibleItems = 3;
+    const totalItems = items.length;
 
-  // Generate slides with proper sizing class
-  baileySets.forEach(set => {
-    for (let i = 1; i <= set.count; i++) {
-      const slide = document.createElement("div");
-      slide.classList.add("swiper-slide");
+    let index = 0;
+    const maxIndex = totalItems - visibleItems;
 
-      const img = document.createElement("img");
-      img.src = `/images/${set.prefix}${i}.jpg`;
-      img.alt = "Bailey Avenue Property Image";
-      img.classList.add("swiper-slide-image"); // ensures CSS sizing like other galleries
-
-      slide.appendChild(img);
-      baileyGalleryWrapper.appendChild(slide);
+    function updateCarousel() {
+        const movePercent = (100 / visibleItems) * index;
+        carousel.style.transform = `translateX(-${movePercent}%)`;
     }
-  });
 
-  // Initialize Swiper AFTER slides exist
-  const baileySwiper = new Swiper(".baileySwiper", {
-    loop: true,
-    navigation: {
-      nextEl: ".baileySwiper .swiper-button-next",
-      prevEl: ".baileySwiper .swiper-button-prev",
-    },
-    pagination: {
-      el: ".baileySwiper .swiper-pagination",
-      clickable: true,
-    },
-  });
+    nextBtn.addEventListener("click", () => {
+        if (index < maxIndex) {
+            index++;
+        } else {
+            index = 0; // loop back
+        }
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        if (index > 0) {
+            index--;
+        } else {
+            index = maxIndex; // loop to end
+        }
+        updateCarousel();
+    });
+
+    setInterval(() => {
+        if (index < maxIndex) {
+            index++;
+        } else {
+            index = 0;
+        }
+        updateCarousel();
+    }, 4000);
+});
 </script>
 
-<style>
-/* Ensure images fit gallery like other sliders */
-.baileySwiper .swiper-slide img,
-.swiper-slide-image {
-  width: 100%;
-  height: 500px;      /* match height of your other galleries */
-  object-fit: cover;   /* crop/scale to fill without stretching */
-}
-.baileySwiper .swiper {
-  height: 500px;       /* match container height */
-}
-</style>
-</body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  flatpickr("#checkin", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+
+  flatpickr("#checkout", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+});
+</script>
+
+<!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+      <script src="/js/bootstrap.bundle.min.js" defer></script>
+<script src="/js/tiny-slider.js" defer></script>
+<script src="/js/aos.js" defer></script>
+<script src="/js/counter.js" defer></script>
+<script src="/js/navbar.js" defer></script>
+<script src="/js/custom.js" defer></script>
+  </body>
 </html>
