@@ -10521,7 +10521,10 @@ body {
 /* NAVBAR */
 .site-nav {
   background: #ffffff !important;
-  position: relative;
+  position: absolute; /* 🔥 this keeps it at the top */
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 /* LOGO */
@@ -10538,13 +10541,6 @@ body {
   color: #000; /* black hover */
 }
 
-/* BURGER ICON */
-.burger {
-  font-size: 28px;
-  color: #d4af37 !important; /* GOLD */
-  cursor: pointer;
-}
-
 /* MOBILE MENU */
 .site-mobile-menu {
   position: fixed;
@@ -10557,11 +10553,6 @@ body {
   transition: 0.3s;
   z-index: 9999;
   padding: 20px;
-}
-
-/* ACTIVE STATE */
-.site-mobile-menu.active {
-  transform: translateX(0);
 }
 
 /* MOBILE LINKS */
@@ -10587,4 +10578,9 @@ body {
 }
 .site-menu li a {
   color: #d4af37;
+}
+.burger:before, 
+.burger span, 
+.burger:after {
+  background: #d4af37; /* GOLD */
 }
