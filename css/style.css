@@ -10566,13 +10566,13 @@ body {
 
 /* MOBILE HOVER */
 .site-mobile-menu a:hover {
-  color: #000;
+  color: #fff;
 }
 
 /* CLOSE BUTTON */
 .site-mobile-menu-close {
   font-size: 24px;
-  color: #000;
+  color: #fff;
   cursor: pointer;
   text-align: right;
 }
@@ -10594,7 +10594,10 @@ body {
   display: block;
 }
 .site-mobile-menu a:hover {
-  color: #000;
+  color: #fff;
   background: #bfa46f;
   border-radius: 5px;
+}
+body.offcanvas-menu .site-mobile-menu {
+  transform: translateX(0);
 }
