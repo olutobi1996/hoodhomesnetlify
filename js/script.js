@@ -139,4 +139,19 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCarousel();
     }, 4000);
 });
+// ================= Burger Icon =================
+document.addEventListener("DOMContentLoaded", function () {
 
+  const menuToggle = document.querySelectorAll('.js-menu-toggle');
+  const mobileMenu = document.querySelector('.site-mobile-menu');
+
+  if (menuToggle.length && mobileMenu) {
+    menuToggle.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        mobileMenu.classList.toggle('active');
+      });
+    });
+  }
+
+});

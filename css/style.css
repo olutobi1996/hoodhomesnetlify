@@ -10518,3 +10518,73 @@ body {
   object-fit: cover;
   display: block;
 }
+
+/* NAVBAR */
+.site-nav {
+  background: #000;
+  padding: 15px 0;
+}
+
+/* LOGO */
+.site-logo {
+  height: 50px;
+}
+
+/* DESKTOP MENU */
+.site-menu li {
+  display: inline-block;
+}
+
+.site-menu li a {
+  color: #d4af37;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.site-menu li a:hover {
+  color: #fff;
+}
+
+/* BURGER */
+.burger {
+  font-size: 28px;
+  color: #d4af37;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.site-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background: #000;
+  transform: translateX(100%);
+  transition: 0.3s;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.site-mobile-menu.active {
+  transform: translateX(0);
+}
+
+.site-mobile-menu a {
+  color: #d4af37;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.site-mobile-menu a:hover {
+  color: #fff;
+}
+
+/* CLOSE BUTTON */
+.site-mobile-menu-close {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  text-align: right;
+}
