@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const mobileMenu = document.querySelector(".site-mobile-menu");
   const mobileBody = document.querySelector(".site-mobile-menu-body");
-  const cloneNavs = document.querySelectorAll(".site-navigation .js-clone-nav");
+  const cloneNavs = document.querySelectorAll(".js-clone-nav");
   const toggles = document.querySelectorAll(".js-menu-toggle");
 
   if (!mobileMenu || !mobileBody) return;
