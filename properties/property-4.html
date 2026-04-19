@@ -4,23 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Knightly Avenue | Hood Homes</title>
+    <title>81 Canterbury Court | Hood Homes</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap Template Fonts -->
+        <!-- Bootstrap Template Fonts -->
     <link rel="stylesheet" href="/css/tiny-slider.css" />
 <link rel="stylesheet" href="/css/aos.css" />
 <link rel="stylesheet" href="/css/style.css" />
 
 <link rel="stylesheet" href="/fonts/icomoon/style.css" />
 <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -110,39 +110,37 @@
   </div>
 </div>
 
-
 <section class="section pt-5" style="padding-top:120px;" data-aos="fade-up">
   <div class="container text-center">
 
-    <h1 class="heading text-primary mb-3">Knightly Avenue</h1>
+    <h1 class="heading text-primary mb-3">81 Canterbury Court</h1>
 
     <p class="text-black-50">
-      A beautifully presented home in Cambridge, offering modern living spaces in a highly sought-after location.
-    </p>
+  A well-presented two-bedroom Cambridge home, offering comfortable living in a convenient and well-connected location.
+</p>
 
   </div>
 </section>
+
 <section class="section bg-light py-5" data-aos="fade-up">
   <div class="container">
 
     <div class="text-center mb-4">
       <h2 class="heading text-primary">Property Gallery</h2>
-      <p class="text-black-50">Modern Cambridge home interior collection</p>
+      <p class="text-black-50">Beautiful Cambridge residence details</p>
     </div>
 
     <div class="gallery-wrapper position-relative overflow-hidden">
 
-      <div class="gallery-carousel d-flex" id="gallery1"></div>
+      <div class="gallery-carousel d-flex" id="gallery2"></div>
 
-      <button class="gallery-arrow left" data-target="gallery1">‹</button>
-      <button class="gallery-arrow right" data-target="gallery1">›</button>
+      <button class="gallery-arrow left" data-target="gallery2">‹</button>
+      <button class="gallery-arrow right" data-target="gallery2">›</button>
 
     </div>
 
   </div>
 </section>
-
-
 <section class="section py-5" data-aos="fade-up">
   <div class="container">
 
@@ -160,14 +158,11 @@
         </div>
 
         <span class="d-block mb-3 text-black-50">
-          Check live availability for Knightly Avenue
+          Check live availability for Bailey Avenue
         </span>
 
-        <iframe
-          src="https://calendar.google.com/calendar/embed?src=7c163b9f7fbe965b2584e0db6c36ba1e0cbe9641ea59284b7300fadb8f4b3fc0%40group.calendar.google.com&ctz=Europe%2FLondon&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showCalendars=0&showTz=0"
-          style="border:0; width:100%; height:500px; border-radius:12px;"
-          loading="lazy">
-        </iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?src=97512570733c10c80a098cb53e1c793bd3ee6f52d5ca6202b92e3c01972bff39%40group.calendar.google.com&ctz=Europe%2FLondon" style="border:0; width:100%; height:500px; border-radius:12px;"
+          loading="lazy"></iframe>
 
       </div>
 
@@ -195,7 +190,7 @@
             <form name="booking" method="POST" data-netlify="true">
 
               <input type="hidden" name="form-name" value="booking">
-              <input type="hidden" name="property" value="Knightly Avenue">
+              <input type="hidden" name="property" value="81 Canterbury Court">
 
               <div class="form-group mb-3">
                 <input id="checkin" type="text" class="form-control form-control-lg"
@@ -232,6 +227,7 @@
 
   </div>
 </section>
+
 
 <div class="site-footer">
   <div class="container">
@@ -319,66 +315,34 @@
   </div>
 </div>
 
-
-<!-- Preloader -->
-    <div id="overlayer"></div>
-    <div class="loader">
-      <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-    </div>
-
-    <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  // =========================
-  // GALLERY DATA
-  // =========================
-
   const galleryData = {
-    gallery1: [
-      ...Array.from({ length: 6 }, (_, i) => `PHOTO-2026-02-24-14-20-59_${i + 1}.jpg`),
-      ...Array.from({ length: 9 }, (_, i) => `PHOTO-2026-02-24-14-21-00_${i + 1}.jpg`),
-      ...Array.from({ length: 8 }, (_, i) => `PHOTO-2026-02-24-14-21-01_${i + 1}.jpg`)
-    ],
-
     gallery2: [
-      ...Array.from({ length: 3 }, (_, i) => `PHOTO-2026-02-24-14-24-07_${i + 1}.jpg`),
-      ...Array.from({ length: 9 }, (_, i) => `PHOTO-2026-02-24-14-24-08_${i + 1}.jpg`),
-      ...Array.from({ length: 12 }, (_, i) => `PHOTO-2026-02-24-14-24-08_10_${i + 1}.jpg`),
-      ...Array.from({ length: 9 }, (_, i) => `PHOTO-2026-02-24-14-24-08_${i + 1}.jpg`)
+      ...Array.from({ length: 10 }, (_, i) => `81 Canterbury Court, Cambridge - ${i + 1}.jpg`)
     ]
   };
 
-  // =========================
-  // BUILD GALLERIES
-  // =========================
-
+  // build gallery
   Object.keys(galleryData).forEach(id => {
     const container = document.getElementById(id);
+    if (!container) return;
 
     galleryData[id].forEach(src => {
       const div = document.createElement("div");
       div.className = "gallery-item";
-
-      div.innerHTML = `<img src="/images/${src}" alt="Gallery image">`;
+      div.innerHTML = `<img src="/images/${src}" alt="81 Canterbury Court">`;
       container.appendChild(div);
     });
   });
 
-  // =========================
-  // SLIDER LOGIC
-  // =========================
-
-  const state = {
-    gallery1: 0,
-    gallery2: 0
-  };
+  // slider state
+  const state = { gallery2: 0 };
 
   function update(galleryId) {
     const carousel = document.getElementById(galleryId);
     const index = state[galleryId];
-
     const offset = -(index * (100 / 3));
     carousel.style.transform = `translateX(${offset}%)`;
   }
@@ -394,10 +358,6 @@ document.addEventListener("DOMContentLoaded", function () {
     update(galleryId);
   }
 
-  // =========================
-  // ARROWS
-  // =========================
-
   document.querySelectorAll(".gallery-arrow").forEach(btn => {
     btn.addEventListener("click", () => {
       const target = btn.dataset.target;
@@ -409,55 +369,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".gallery-carousel");
-    const items = document.querySelectorAll(".gallery-item");
-    const prevBtn = document.querySelector(".gallery-arrow.left");
-    const nextBtn = document.querySelector(".gallery-arrow.right");
-
-    const visibleItems = 3;
-    const totalItems = items.length;
-
-    let index = 0;
-    const maxIndex = totalItems - visibleItems;
-
-    function updateCarousel() {
-        const movePercent = (100 / visibleItems) * index;
-        carousel.style.transform = `translateX(-${movePercent}%)`;
-    }
-
-    nextBtn.addEventListener("click", () => {
-        if (index < maxIndex) {
-            index++;
-        } else {
-            index = 0; // loop back
-        }
-        updateCarousel();
-    });
-
-    prevBtn.addEventListener("click", () => {
-        if (index > 0) {
-            index--;
-        } else {
-            index = maxIndex; // loop to end
-        }
-        updateCarousel();
-    });
-
-    setInterval(() => {
-        if (index < maxIndex) {
-            index++;
-        } else {
-            index = 0;
-        }
-        updateCarousel();
-    }, 4000);
-});
-</script>
-
-
-    <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
   flatpickr("#checkin", {
     dateFormat: "Y-m-d",
@@ -470,6 +382,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+
+<!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
       <script src="/js/bootstrap.bundle.min.js" defer></script>
 <script src="/js/tiny-slider.js" defer></script>
 <script src="/js/aos.js" defer></script>
