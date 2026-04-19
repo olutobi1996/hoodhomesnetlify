@@ -321,53 +321,32 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  // =========================
-  // GALLERY DATA
-  // =========================
-
   const galleryData = {
-    gallery1: [
-      ...Array.from({ length: 6 }, (_, i) => `PHOTO-2026-02-24-14-20-59_${i + 1}.jpg`),
-      ...Array.from({ length: 9 }, (_, i) => `PHOTO-2026-02-24-14-21-00_${i + 1}.jpg`),
-      ...Array.from({ length: 8 }, (_, i) => `PHOTO-2026-02-24-14-21-01_${i + 1}.jpg`)
-    ],
-
-   
-     gallery2: [
-  ...Array.from({ length: 3 }, (_, i) => `PHOTO-2026-02-24-14-24-07_${i + 1}.jpg`),
-  ...Array.from({ length: 9 }, (_, i) => `PHOTO-2026-02-24-14-24-08_${i + 1}.jpg`)
-]
+    gallery2: [
+      ...Array.from({ length: 3 }, (_, i) => `PHOTO-2026-02-24-14-24-07_${i + 1}.jpg`),
+      ...Array.from({ length: 9 }, (_, i) => `PHOTO-2026-02-24-14-24-08_${i + 1}.jpg`)
+    ]
   };
 
-  // =========================
-  // BUILD GALLERIES
-  // =========================
-
+  // build gallery
   Object.keys(galleryData).forEach(id => {
     const container = document.getElementById(id);
+    if (!container) return; // safety
 
     galleryData[id].forEach(src => {
       const div = document.createElement("div");
       div.className = "gallery-item";
-
-      div.innerHTML = `<img src="/images/${src}" alt="Gallery image">`;
+      div.innerHTML = `<img src="/images/${src}" alt="Bailey Avenue">`;
       container.appendChild(div);
     });
   });
 
-  // =========================
-  // SLIDER LOGIC
-  // =========================
-
-  const state = {
-    gallery1: 0,
-    gallery2: 0
-  };
+  // slider state
+  const state = { gallery2: 0 };
 
   function update(galleryId) {
     const carousel = document.getElementById(galleryId);
     const index = state[galleryId];
-
     const offset = -(index * (100 / 3));
     carousel.style.transform = `translateX(${offset}%)`;
   }
@@ -383,10 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
     update(galleryId);
   }
 
-  // =========================
-  // ARROWS
-  // =========================
-
+  // arrows
   document.querySelectorAll(".gallery-arrow").forEach(btn => {
     btn.addEventListener("click", () => {
       const target = btn.dataset.target;
@@ -395,52 +371,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-});
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".gallery-carousel");
-    const items = document.querySelectorAll(".gallery-item");
-    const prevBtn = document.querySelector(".gallery-arrow.left");
-    const nextBtn = document.querySelector(".gallery-arrow.right");
-
-    const visibleItems = 3;
-    const totalItems = items.length;
-
-    let index = 0;
-    const maxIndex = totalItems - visibleItems;
-
-    function updateCarousel() {
-        const movePercent = (100 / visibleItems) * index;
-        carousel.style.transform = `translateX(-${movePercent}%)`;
-    }
-
-    nextBtn.addEventListener("click", () => {
-        if (index < maxIndex) {
-            index++;
-        } else {
-            index = 0; // loop back
-        }
-        updateCarousel();
-    });
-
-    prevBtn.addEventListener("click", () => {
-        if (index > 0) {
-            index--;
-        } else {
-            index = maxIndex; // loop to end
-        }
-        updateCarousel();
-    });
-
-    setInterval(() => {
-        if (index < maxIndex) {
-            index++;
-        } else {
-            index = 0;
-        }
-        updateCarousel();
-    }, 4000);
 });
 </script>
 

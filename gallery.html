@@ -106,76 +106,14 @@
 </div>
 
 <!-- Gallery Hero Slider -->
-<section class="section py-5 bg-light" data-aos="fade-up">
-  <div class="container">
+<div class="gallery-wrapper position-relative overflow-hidden">
 
-    <div class="text-center mb-4">
-      <h2 class="heading text-primary">Gallery</h2>
-    </div>
+  <div class="gallery-carousel d-flex" id="galleryMain"></div>
 
-    <div id="hoodHomesGallery" class="carousel slide" data-bs-ride="carousel">
-
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#hoodHomesGallery" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#hoodHomesGallery" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#hoodHomesGallery" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#hoodHomesGallery" data-bs-slide-to="3"></button>
-    <button type="button" data-bs-target="#hoodHomesGallery" data-bs-slide-to="4"></button>
-    <button type="button" data-bs-target="#hoodHomesGallery" data-bs-slide-to="5"></button>
-    <button type="button" data-bs-target="#hoodHomesGallery" data-bs-slide-to="6"></button>
-    <button type="button" data-bs-target="#hoodHomesGallery" data-bs-slide-to="7"></button>
-  </div>
-
-  <div class="carousel-inner rounded-4 overflow-hidden shadow">
-
-    <!-- ONLY ONE active -->
-    <div class="carousel-item active">
-      <img src="/images/Cambridge11.jpg" class="d-block w-100" style="height:600px; object-fit:cover;">
-    </div>
-
-    <div class="carousel-item">
-      <img src="/images/Cambridge_Photos_14.jpg" class="d-block w-100" style="height:600px; object-fit:cover;">
-    </div>
-
-    <div class="carousel-item">
-      <img src="/images/35_Knightly_Avenue_15.jpg" class="d-block w-100" style="height:600px; object-fit:cover;">
-    </div>
-
-    <div class="carousel-item">
-      <img src="/images/48_Hillfield_Comberton_29.jpg" class="d-block w-100" style="height:600px; object-fit:cover;">
-    </div>
-
-    <div class="carousel-item">
-      <img src="/images/Cambridge_Photos_23.jpg" class="d-block w-100" style="height:600px; object-fit:cover;">
-    </div>
-
-    <div class="carousel-item">
-      <img src="/images/PHOTO-2026-01-29-13-02-02_1.jpg" class="d-block w-100" style="height:600px; object-fit:cover;">
-    </div>
-
-    <div class="carousel-item">
-      <img src="/images/35_Knightly_Avenue_10.jpg" class="d-block w-100" style="height:600px; object-fit:cover;">
-    </div>
-
-    <div class="carousel-item">
-      <img src="/images/PHOTO-2026-01-29-13-02-04_5.jpg" class="d-block w-100" style="height:600px; object-fit:cover;">
-    </div>
-
-  </div>
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#hoodHomesGallery" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-
-  <button class="carousel-control-next" type="button" data-bs-target="#hoodHomesGallery" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
+  <button class="gallery-arrow left" data-target="galleryMain">‹</button>
+  <button class="gallery-arrow right" data-target="galleryMain">›</button>
 
 </div>
-  
-
-  </div>
-</section>
 
 <div class="site-footer">
   <div class="container">
@@ -277,5 +215,89 @@
 <script src="/js/counter.js" defer></script>
 <script src="/js/navbar.js" defer></script>
 <script src="/js/custom.js" defer></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // =========================
+  // GALLERY IMAGES
+  // =========================
+
+  const images = [
+  "Cambridge11.jpg",
+
+  // Cambridge_Photos_14 set
+  "Cambridge_Photos_14.jpg",
+  "Cambridge_Photos_17.jpg",
+  "Cambridge_Photos_23.jpg",
+  "Cambridge_Photos_27.jpg",
+  "Cambridge_Photos_28.jpg",
+  "Cambridge_Photos_32.jpg",
+  "Cambridge_Photos_35.jpg",
+
+  // Knightley + others
+  "35_Knightly_Avenue_15.jpg",
+  "48_Hillfield_Comberton_29.jpg",
+  "PHOTO-2026-01-29-13-02-02_1.jpg",
+  "35_Knightly_Avenue_10.jpg",
+  "PHOTO-2026-01-29-13-02-04_5.jpg",
+
+  // Cambridge1 to Cambridge18
+  "Cambridge1.jpg",
+  "Cambridge2.jpg",
+  "Cambridge3.jpg",
+  "Cambridge4.jpg",
+  "Cambridge5.jpg",
+  "Cambridge6.jpg",
+  "Cambridge7.jpg",
+  "Cambridge8.jpg",
+  "Cambridge9.jpg",
+  "Cambridge10.jpg",
+  "Cambridge11.jpg",
+  "Cambridge12.jpg",
+  "Cambridge13.jpg",
+  "Cambridge14.jpg",
+  "Cambridge15.jpg",
+  "Cambridge16.jpg",
+  "Cambridge17.jpg",
+  "Cambridge18.jpg"
+];
+
+  const container = document.getElementById("galleryMain");
+
+  // build images
+  images.forEach(src => {
+    const div = document.createElement("div");
+    div.className = "gallery-item";
+    div.innerHTML = `<img src="/images/${src}" alt="Gallery image">`;
+    container.appendChild(div);
+  });
+
+  // =========================
+  // SLIDER LOGIC
+  // =========================
+
+  let index = 0;
+  const visibleItems = 3;
+  const totalItems = images.length;
+  const maxIndex = totalItems - visibleItems;
+
+  function update() {
+    const move = (100 / visibleItems) * index;
+    container.style.transform = `translateX(-${move}%)`;
+  }
+
+  document.querySelector('[data-target="galleryMain"].right').onclick = () => {
+    index = index < maxIndex ? index + 1 : 0;
+    update();
+  };
+
+  document.querySelector('[data-target="galleryMain"].left').onclick = () => {
+    index = index > 0 ? index - 1 : maxIndex;
+    update();
+  };
+
+});
+</script>
   </body>
 </html>
