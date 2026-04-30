@@ -10685,3 +10685,9 @@ iframe {
 
 .gallery-arrow.left { left: 10px; }
 .gallery-arrow.right { right: 10px; }
+
+.property-item .img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
