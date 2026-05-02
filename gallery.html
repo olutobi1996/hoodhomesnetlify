@@ -126,7 +126,7 @@
 
           <ul class="list-unstyled links">
             <li><a href="tel:07841519614">07841 519 614</a></li>
-            <li><a href="mailto:Office@hoodhomes.co.uk">Office@hoodhomes.co.uk</a></li>
+            <li><a href="mailto:Office@hoodhomes.co.uk">office@hoodhomes.co.uk</a></li>
           </ul>
         </div>
       </div>
@@ -223,7 +223,6 @@
 <script src="/js/counter.js" defer></script>
 <script src="/js/navbar.js" defer></script>
 <script src="/js/custom.js" defer></script>
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -232,78 +231,82 @@ document.addEventListener("DOMContentLoaded", function () {
   // =========================
 
   const images = [
-  "Cambridge11.jpg",
+    "Cambridge11.jpg",
+    "Cambridge_Photos_14.jpg",
+    "Cambridge_Photos_17.jpg",
+    "Cambridge_Photos_23.jpg",
+    "Cambridge_Photos_27.jpg",
+    "Cambridge_Photos_28.jpg",
+    "Cambridge_Photos_32.jpg",
+    "Cambridge_Photos_35.jpg",
+    "35_Knightly_Avenue_15.jpg",
+    "48_Hillfield_Comberton_29.jpg",
+    "PHOTO-2026-01-29-13-02-02_1.jpg",
+    "35_Knightly_Avenue_10.jpg",
+    "PHOTO-2026-01-29-13-02-04_5.jpg",
+    "Cambridge1.jpg",
+    "Cambridge2.jpg",
+    "Cambridge3.jpg",
+    "Cambridge4.jpg",
+    "Cambridge5.jpg",
+    "Cambridge6.jpg",
+    "Cambridge7.jpg",
+    "Cambridge8.jpg",
+    "Cambridge9.jpg",
+    "Cambridge10.jpg",
+    "Cambridge11.jpg",
+    "Cambridge12.jpg",
+    "Cambridge13.jpg",
+    "Cambridge14.jpg",
+    "Cambridge15.jpg",
+    "Cambridge16.jpg",
+    "Cambridge17.jpg",
+    "Cambridge18.jpg"
+  ];
 
-  // Cambridge_Photos_14 set
-  "Cambridge_Photos_14.jpg",
-  "Cambridge_Photos_17.jpg",
-  "Cambridge_Photos_23.jpg",
-  "Cambridge_Photos_27.jpg",
-  "Cambridge_Photos_28.jpg",
-  "Cambridge_Photos_32.jpg",
-  "Cambridge_Photos_35.jpg",
+  const carousel = document.getElementById("galleryMain");
 
-  // Knightley + others
-  "35_Knightly_Avenue_15.jpg",
-  "48_Hillfield_Comberton_29.jpg",
-  "PHOTO-2026-01-29-13-02-02_1.jpg",
-  "35_Knightly_Avenue_10.jpg",
-  "PHOTO-2026-01-29-13-02-04_5.jpg",
-
-  // Cambridge1 to Cambridge18
-  "Cambridge1.jpg",
-  "Cambridge2.jpg",
-  "Cambridge3.jpg",
-  "Cambridge4.jpg",
-  "Cambridge5.jpg",
-  "Cambridge6.jpg",
-  "Cambridge7.jpg",
-  "Cambridge8.jpg",
-  "Cambridge9.jpg",
-  "Cambridge10.jpg",
-  "Cambridge11.jpg",
-  "Cambridge12.jpg",
-  "Cambridge13.jpg",
-  "Cambridge14.jpg",
-  "Cambridge15.jpg",
-  "Cambridge16.jpg",
-  "Cambridge17.jpg",
-  "Cambridge18.jpg"
-];
-
-  const container = document.getElementById("galleryMain");
-
-  // build images
+  // 🔥 BUILD IMAGES (YOU NEED THIS)
   images.forEach(src => {
     const div = document.createElement("div");
     div.className = "gallery-item";
-    div.innerHTML = `<img src="/images/${src}" alt="Gallery image">`;
-    container.appendChild(div);
+    div.innerHTML = `<img src="/images/${src}" loading="lazy" alt="Gallery image">`;
+    carousel.appendChild(div);
   });
 
   // =========================
   // SLIDER LOGIC
   // =========================
 
-  let index = 0;
-  const visibleItems = 3;
-  const totalItems = images.length;
-  const maxIndex = totalItems - visibleItems;
+  const prevBtn = document.querySelector(".gallery-arrow.left");
+  const nextBtn = document.querySelector(".gallery-arrow.right");
 
-  function update() {
-    const move = (100 / visibleItems) * index;
-    container.style.transform = `translateX(-${move}%)`;
+  const totalItems = images.length;
+  const visibleItems = 1;
+  let index = 0;
+
+  carousel.style.transition = "transform 0.2s ease-out";
+  carousel.style.willChange = "transform";
+
+  function updateCarousel() {
+    const offset = -(index * (100 / visibleItems));
+    carousel.style.transform = `translateX(${offset}%)`;
   }
 
-  document.querySelector('[data-target="galleryMain"].right').onclick = () => {
-    index = index < maxIndex ? index + 1 : 0;
-    update();
-  };
+  nextBtn?.addEventListener("click", () => {
+    index = index < totalItems - visibleItems ? index + 1 : 0;
+    updateCarousel();
+  });
 
-  document.querySelector('[data-target="galleryMain"].left').onclick = () => {
-    index = index > 0 ? index - 1 : maxIndex;
-    update();
-  };
+  prevBtn?.addEventListener("click", () => {
+    index = index > 0 ? index - 1 : totalItems - visibleItems;
+    updateCarousel();
+  });
+
+  setInterval(() => {
+    index = index < totalItems - visibleItems ? index + 1 : 0;
+    updateCarousel();
+  }, 2000);
 
 });
 </script>

@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
 // ================= Carousel / Gallery =================
 document.addEventListener("DOMContentLoaded", function() {
     const carousel = document.querySelector(".gallery-carousel");
@@ -116,8 +115,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextBtn = document.querySelector(".gallery-arrow.right");
 
     const totalItems = items.length;
-    const visibleItems = 3;
+    const visibleItems = 1; // 🔥 was 3 → now 1 for speed feel
     let index = 0;
+
+    // 🔥 faster + smoother transition (JS fallback in case CSS missing)
+    carousel.style.transition = "transform 0.2s ease-out";
+    carousel.style.willChange = "transform";
 
     function updateCarousel() {
         const offset = -(index * (100 / visibleItems));
@@ -125,19 +128,28 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     nextBtn?.addEventListener("click", () => {
-        index = (index + 1) % totalItems;
+        if (index < totalItems - visibleItems) {
+            index++;
+        } else {
+            index = 0;
+        }
         updateCarousel();
     });
 
     prevBtn?.addEventListener("click", () => {
-        index = (index - 1 + totalItems) % totalItems;
+        if (index > 0) {
+            index--;
+        } else {
+            index = totalItems - visibleItems;
+        }
         updateCarousel();
     });
 
+    // 🔥 faster autoplay (optional)
     setInterval(() => {
-        index = (index + 1) % totalItems;
+        index = index < totalItems - visibleItems ? index + 1 : 0;
         updateCarousel();
-    }, 4000);
+    }, 2000); // was 4000 → now faster
 });
 
  document.addEventListener("DOMContentLoaded", () => {
