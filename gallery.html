@@ -108,10 +108,7 @@
 <!-- Gallery Hero Slider -->
 <div class="gallery-wrapper position-relative overflow-hidden">
 
-  <div class="gallery-carousel d-flex" id="galleryMain"></div>
-
-  <button class="gallery-arrow left" data-target="galleryMain">‹</button>
-  <button class="gallery-arrow right" data-target="galleryMain">›</button>
+  <div class="photogallery" id="galleryMain"></div>
 
 </div>
 
@@ -226,10 +223,6 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  // =========================
-  // GALLERY IMAGES
-  // =========================
-
   const images = [
     "Cambridge11.jpg",
     "Cambridge_Photos_14.jpg",
@@ -264,49 +257,25 @@ document.addEventListener("DOMContentLoaded", function () {
     "Cambridge18.jpg"
   ];
 
-  const carousel = document.getElementById("galleryMain");
+  const gallery = document.getElementById("galleryMain");
 
-  // 🔥 BUILD IMAGES (YOU NEED THIS)
-  images.forEach(src => {
-    const div = document.createElement("div");
-    div.className = "gallery-item";
-    div.innerHTML = `<img src="/images/${src}" loading="lazy" alt="Gallery image">`;
-    carousel.appendChild(div);
-  });
-
-  // =========================
-  // SLIDER LOGIC
-  // =========================
-
-  const prevBtn = document.querySelector(".gallery-arrow.left");
-  const nextBtn = document.querySelector(".gallery-arrow.right");
-
-  const totalItems = images.length;
-  const visibleItems = 1;
-  let index = 0;
-
-  carousel.style.transition = "transform 0.2s ease-out";
-  carousel.style.willChange = "transform";
-
-  function updateCarousel() {
-    const offset = -(index * (100 / visibleItems));
-    carousel.style.transform = `translateX(${offset}%)`;
+  if (!gallery) {
+    console.error("Gallery container #galleryMain not found");
+    return;
   }
 
-  nextBtn?.addEventListener("click", () => {
-    index = index < totalItems - visibleItems ? index + 1 : 0;
-    updateCarousel();
-  });
+  images.forEach(src => {
+    const item = document.createElement("div");
+    item.className = "photo-item";
 
-  prevBtn?.addEventListener("click", () => {
-    index = index > 0 ? index - 1 : totalItems - visibleItems;
-    updateCarousel();
-  });
+    const img = document.createElement("img");
+    img.src = `/images/${src}`;
+    img.loading = "lazy";
+    img.alt = "Gallery image";
 
-  setInterval(() => {
-    index = index < totalItems - visibleItems ? index + 1 : 0;
-    updateCarousel();
-  }, 2000);
+    item.appendChild(img);
+    gallery.appendChild(item);
+  });
 
 });
 </script>
