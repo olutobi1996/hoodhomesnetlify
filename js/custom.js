@@ -75,7 +75,7 @@
 				mode: 'carousel',
 				speed: 700,
 				gutter: 30,
-				items: 3,
+				items: 5,
 				autoplay: true,
 				autoplayButtonOutput: false,
 				controlsContainer: '#property-nav',
@@ -87,7 +87,7 @@
 						items: 2
 					},
 					900: {
-						items: 3
+						items: 5
 					}
 				}
 			});
