@@ -90,7 +90,7 @@
 
         <div data-aos="fade-up" data-aos-delay="250">
           <a href="/contact.html" class="btn btn-primary py-3 px-4 mt-3">
-            Book a Valuation
+            Discuss Your Property
           </a>
         </div>
 
@@ -326,9 +326,11 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+  // Exterior shot ("81 Canterbury Court, Cambridge - 1.jpg") removed per client note:
+  // main/gallery photos should lead with interior shots for this property.
   const galleryData = {
     gallery2: [
-      ...Array.from({ length: 10 }, (_, i) => `81 Canterbury Court, Cambridge - ${i + 1}.jpg`)
+      ...Array.from({ length: 9 }, (_, i) => `81 Canterbury Court, Cambridge - ${i + 2}.jpg`)
     ]
   };
 
