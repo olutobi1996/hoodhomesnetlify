@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Kings Hedges Road | Hood Homes</title>
+    <title>Apartment 2, Kings Hedges Road | Hood Homes</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -113,10 +113,10 @@
 <section class="section pt-5" style="padding-top:120px;" data-aos="fade-up">
   <div class="container text-center">
 
-    <h1 class="heading text-primary mb-3">Hedges Road</h1>
+    <h1 class="heading text-primary mb-3">Apartment 2, Kings Hedges Road</h1>
 
     <p class="text-black-50">
-      A modern new-build Cambridge home, offering clean, stylish living in a well-connected and convenient location.
+      A modern new-build Cambridge apartment, offering clean, stylish living in a well-connected and convenient location.
     </p>
 
   </div>
@@ -132,10 +132,10 @@
 
     <div class="gallery-wrapper position-relative overflow-hidden">
 
-      <div class="gallery-carousel d-flex" id="gallery5"></div>
+      <div class="gallery-carousel d-flex" id="gallery6-apt2"></div>
 
-      <button class="gallery-arrow left" data-target="gallery5">‹</button>
-      <button class="gallery-arrow right" data-target="gallery5">›</button>
+      <button class="gallery-arrow left" data-target="gallery6-apt2">‹</button>
+      <button class="gallery-arrow right" data-target="gallery6-apt2">›</button>
 
     </div>
 
@@ -159,7 +159,7 @@
         </div>
 
         <span class="d-block mb-3 text-black-50">
-          Check live availability for Kings Hedge Road
+          Check live availability for Apartment 2, Kings Hedges Road
         </span>
 
         <iframe src="https://calendar.google.com/calendar/embed?src=97512570733c10c80a098cb53e1c793bd3ee6f52d5ca6202b92e3c01972bff39%40group.calendar.google.com&ctz=Europe%2FLondon"
@@ -192,7 +192,7 @@
             <form name="booking" method="POST" data-netlify="true">
 
               <input type="hidden" name="form-name" value="booking">
-              <input type="hidden" name="property" value="81 Canterbury Court">
+              <input type="hidden" name="property" value="Apartment 2, Kings Hedges Road">
 
               <div class="form-group mb-3">
                 <input id="checkin" type="text" class="form-control form-control-lg"
@@ -328,7 +328,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
  const galleryData = {
-  gallery5: [
+  "gallery6-apt2": [
     "127a Kings Hedge Road - 9.jpg",
     "127a Kings Hedge Road - 10.jpg",
     "127a Kings Hedge Road - 15.jpg",
@@ -351,13 +351,13 @@ document.addEventListener("DOMContentLoaded", function () {
     galleryData[id].forEach(src => {
       const div = document.createElement("div");
       div.className = "gallery-item";
-      div.innerHTML = `<img src="/images/${src}" alt="81 Canterbury Court">`;
+      div.innerHTML = `<img src="/images/${src}" alt="Apartment 2, Kings Hedges Road">`;
       container.appendChild(div);
     });
   });
 
   // slider state
-  const state = { gallery5: 0 };
+  const state = { "gallery6-apt2": 0 };
 
   function update(galleryId) {
     const carousel = document.getElementById(galleryId);

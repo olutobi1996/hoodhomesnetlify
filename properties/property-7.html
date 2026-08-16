@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Apartment 1, Kings Hedges Road | Hood Homes</title>
+    <title>Hills Court, Cambridge | Hood Homes</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -74,7 +74,7 @@
 <!-- Hero Section (Untree Style Adapted) -->
 <div
   class="hero page-inner overlay"
-  style="background-image: url('/images/127a\ Kings\ Hedge\ Road\ -\ 9.jpg')"
+  style="background-image: url('/images/Cambridge15.jpg') /* PLACEHOLDER — replace once Jake sends photos */"
 >
   <div class="container">
     <div class="row justify-content-center align-items-center">
@@ -113,10 +113,10 @@
 <section class="section pt-5" style="padding-top:120px;" data-aos="fade-up">
   <div class="container text-center">
 
-    <h1 class="heading text-primary mb-3">Apartment 1, Kings Hedges Road</h1>
+    <h1 class="heading text-primary mb-3">Hills Court, Cambridge</h1>
 
     <p class="text-black-50">
-      A modern new-build Cambridge apartment, offering clean, stylish living in a well-connected and convenient location.
+      A well-presented Cambridge property at Hills Court, managed by Hood Homes. Full details and photos to follow shortly.
     </p>
 
   </div>
@@ -127,15 +127,15 @@
 
     <div class="text-center mb-4">
       <h2 class="heading text-primary">Property Gallery</h2>
-      <p class="text-black-50">Modern Cambridge residence</p>
+      <p class="text-black-50">Photos coming soon</p>
     </div>
 
     <div class="gallery-wrapper position-relative overflow-hidden">
 
-      <div class="gallery-carousel d-flex" id="gallery5-apt1"></div>
+      <div class="gallery-carousel d-flex" id="gallery7-hills"></div>
 
-      <button class="gallery-arrow left" data-target="gallery5-apt1">‹</button>
-      <button class="gallery-arrow right" data-target="gallery5-apt1">›</button>
+      <button class="gallery-arrow left" data-target="gallery7-hills">‹</button>
+      <button class="gallery-arrow right" data-target="gallery7-hills">›</button>
 
     </div>
 
@@ -159,7 +159,7 @@
         </div>
 
         <span class="d-block mb-3 text-black-50">
-          Check live availability for Apartment 1, Kings Hedges Road
+          Check live availability for Hills Court, Cambridge
         </span>
 
         <iframe src="https://calendar.google.com/calendar/embed?src=97512570733c10c80a098cb53e1c793bd3ee6f52d5ca6202b92e3c01972bff39%40group.calendar.google.com&ctz=Europe%2FLondon"
@@ -192,7 +192,7 @@
             <form name="booking" method="POST" data-netlify="true">
 
               <input type="hidden" name="form-name" value="booking">
-              <input type="hidden" name="property" value="Apartment 1, Kings Hedges Road">
+              <input type="hidden" name="property" value="Hills Court, Cambridge">
 
               <div class="form-group mb-3">
                 <input id="checkin" type="text" class="form-control form-control-lg"
@@ -328,18 +328,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
  const galleryData = {
-  "gallery5-apt1": [
-    "127a Kings Hedge Road - 9.jpg",
-    "127a Kings Hedge Road - 10.jpg",
-    "127a Kings Hedge Road - 15.jpg",
-    "127a Kings Hedge Road - 18.jpg",
-    "127a Kings Hedge Road - 31.jpg",
-    "127a Kings Hedge Road - 35.jpg",
-    "127a Kings Hedge Road - 38.jpg",
-    "127a Kings Hedge Road - 45.jpg",
-    "127a Kings Hedge Road - 47.jpg",
-    "127a Kings Hedge Road - 50.jpg",
-    "127a Kings Hedge Road - 1.jpg"
+  "gallery7-hills": [
+    // TODO: add photo filenames here once Jake sends them, e.g.:
+    // "Hills Court - 1.jpg",
+    // "Hills Court - 2.jpg"
   ]
 };
 
@@ -351,13 +343,13 @@ document.addEventListener("DOMContentLoaded", function () {
     galleryData[id].forEach(src => {
       const div = document.createElement("div");
       div.className = "gallery-item";
-      div.innerHTML = `<img src="/images/${src}" alt="Apartment 1, Kings Hedges Road">`;
+      div.innerHTML = `<img src="/images/${src}" alt="Hills Court, Cambridge">`;
       container.appendChild(div);
     });
   });
 
   // slider state
-  const state = { "gallery5-apt1": 0 };
+  const state = { "gallery7-hills": 0 };
 
   function update(galleryId) {
     const carousel = document.getElementById(galleryId);
