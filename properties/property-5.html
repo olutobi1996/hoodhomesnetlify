@@ -46,7 +46,7 @@
           <div class="site-navigation">
 
             <!-- Logo -->
-            <a href="/index.html" class="logo m-0 float-start">
+            <a href="index.html" class="logo m-0 float-start">
   <img src="/images/hoodhomes.png" alt="Hood Homes Logo" class="site-logo">
 </a>
             <!-- MENU -->
@@ -116,7 +116,7 @@
     <h1 class="heading text-primary mb-3">Apartment 1, Kings Hedges Road</h1>
 
     <p class="text-black-50">
-      A modern new-build Cambridge apartment, offering clean, stylish living in a well-connected and convenient location.
+      A modern new-build Cambridge apartment, offering clean, stylish living in a well-connected and convenient location. Sleeps up to 2 guests, 1 bedroom, 1 bathroom.
     </p>
 
   </div>
@@ -132,10 +132,10 @@
 
     <div class="gallery-wrapper position-relative overflow-hidden">
 
-      <div class="gallery-carousel d-flex" id="gallery5-apt1"></div>
+      <div class="gallery-carousel d-flex" id="gallery5"></div>
 
-      <button class="gallery-arrow left" data-target="gallery5-apt1">‹</button>
-      <button class="gallery-arrow right" data-target="gallery5-apt1">›</button>
+      <button class="gallery-arrow left" data-target="gallery5">‹</button>
+      <button class="gallery-arrow right" data-target="gallery5">›</button>
 
     </div>
 
@@ -328,7 +328,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
  const galleryData = {
-  "gallery5-apt1": [
+  gallery5: [
     "127a Kings Hedge Road - 9.jpg",
     "127a Kings Hedge Road - 10.jpg",
     "127a Kings Hedge Road - 15.jpg",
@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // slider state
-  const state = { "gallery5-apt1": 0 };
+  const state = { gallery5: 0 };
 
   function update(galleryId) {
     const carousel = document.getElementById(galleryId);

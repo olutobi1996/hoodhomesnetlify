@@ -1,65 +1,10 @@
-
-1 of 174
-(no subject)
-Inbox
-
-Olutobi Adebayo-Rowling
-Attachments
-14:01 (4 minutes ago)
-to me
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Sent from my iPhone
- 14 attachment
-  •  Scanned by Gmail
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Apartment 2, Kings Hedges Road | Hood Homes</title>
+    <title>Flat 7, Hills Court | Hood Homes</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -129,7 +74,7 @@ Sent from my iPhone
 <!-- Hero Section (Untree Style Adapted) -->
 <div
   class="hero page-inner overlay"
-  style="background-image: url('/images/127a\ Kings\ Hedge\ Road\ -\ 10.jpg')"
+  style="background-image: url('/images/Flat 7 Hills Court - 1.png')"
 >
   <div class="container">
     <div class="row justify-content-center align-items-center">
@@ -168,10 +113,10 @@ Sent from my iPhone
 <section class="section pt-5" style="padding-top:120px;" data-aos="fade-up">
   <div class="container text-center">
 
-    <h1 class="heading text-primary mb-3">Apartment 2, Kings Hedges Road</h1>
+    <h1 class="heading text-primary mb-3">Flat 7, Hills Court</h1>
 
     <p class="text-black-50">
-      A modern new-build Cambridge apartment, offering clean, stylish living in a well-connected and convenient location. Sleeps up to 2 guests, 1 bedroom, 1 bathroom.
+      A well-presented Cambridge apartment on Hills Road, managed by Hood Homes. Sleeps up to 4 guests, 2 bedrooms, 1 bathroom.
     </p>
 
   </div>
@@ -182,15 +127,15 @@ Sent from my iPhone
 
     <div class="text-center mb-4">
       <h2 class="heading text-primary">Property Gallery</h2>
-      <p class="text-black-50">Modern Cambridge residence</p>
+      <p class="text-black-50">Take a look around</p>
     </div>
 
     <div class="gallery-wrapper position-relative overflow-hidden">
 
-      <div class="gallery-carousel d-flex" id="gallery6"></div>
+      <div class="gallery-carousel d-flex" id="gallery10-hills"></div>
 
-      <button class="gallery-arrow left" data-target="gallery6">‹</button>
-      <button class="gallery-arrow right" data-target="gallery6">›</button>
+      <button class="gallery-arrow left" data-target="gallery10-hills">‹</button>
+      <button class="gallery-arrow right" data-target="gallery10-hills">›</button>
 
     </div>
 
@@ -214,7 +159,7 @@ Sent from my iPhone
         </div>
 
         <span class="d-block mb-3 text-black-50">
-          Check live availability for Apartment 2, Kings Hedges Road
+          Check live availability for Flat 7, Hills Court
         </span>
 
         <iframe src="https://calendar.google.com/calendar/embed?src=97512570733c10c80a098cb53e1c793bd3ee6f52d5ca6202b92e3c01972bff39%40group.calendar.google.com&ctz=Europe%2FLondon"
@@ -247,7 +192,7 @@ Sent from my iPhone
             <form name="booking" method="POST" data-netlify="true">
 
               <input type="hidden" name="form-name" value="booking">
-              <input type="hidden" name="property" value="Apartment 2, Kings Hedges Road">
+              <input type="hidden" name="property" value="Flat 7, Hills Court">
 
               <div class="form-group mb-3">
                 <input id="checkin" type="text" class="form-control form-control-lg"
@@ -383,18 +328,14 @@ Sent from my iPhone
 document.addEventListener("DOMContentLoaded", function () {
 
  const galleryData = {
-  gallery6: [
-    "127a Kings Hedge Road - 9.jpg",
-    "127a Kings Hedge Road - 10.jpg",
-    "127a Kings Hedge Road - 15.jpg",
-    "127a Kings Hedge Road - 18.jpg",
-    "127a Kings Hedge Road - 31.jpg",
-    "127a Kings Hedge Road - 35.jpg",
-    "127a Kings Hedge Road - 38.jpg",
-    "127a Kings Hedge Road - 45.jpg",
-    "127a Kings Hedge Road - 47.jpg",
-    "127a Kings Hedge Road - 50.jpg",
-    "127a Kings Hedge Road - 1.jpg"
+  "gallery10-hills": [
+    "Flat 7 Hills Court - 1.png",
+    "Flat 7 Hills Court - 2.png",
+    "Flat 7 Hills Court - 3.jpg",
+    "Flat 7 Hills Court - 4.jpg",
+    "Flat 7 Hills Court - 5.jpg",
+    "Flat 7 Hills Court - 6.png",
+    "Flat 7 Hills Court - 7.png"
   ]
 };
 
@@ -406,13 +347,13 @@ document.addEventListener("DOMContentLoaded", function () {
     galleryData[id].forEach(src => {
       const div = document.createElement("div");
       div.className = "gallery-item";
-      div.innerHTML = `<img src="/images/${src}" alt="Apartment 2, Kings Hedges Road">`;
+      div.innerHTML = `<img src="/images/${src}" alt="Flat 7, Hills Court">`;
       container.appendChild(div);
     });
   });
 
   // slider state
-  const state = { gallery6: 0 };
+  const state = { "gallery10-hills": 0 };
 
   function update(galleryId) {
     const carousel = document.getElementById(galleryId);
