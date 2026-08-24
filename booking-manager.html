@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Booking Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap Template Fonts -->
+    <link rel="stylesheet" href="/css/tiny-slider.css" />
+<link rel="stylesheet" href="/css/aos.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/fonts/icomoon/style.css" />
+<link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css" />
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="booking-manager.css">
+</head>
+
+<body>
+
+    <main class="booking-manager">
+
+        <section class="booking-header">
+            <span class="eyebrow">ADMIN</span>
+            <h1>Booking Manager</h1>
+            <p>
+                Paste your client's booking email below and we'll turn it
+                into calendar bookings.
+            </p>
+        </section>
+
+
+        <section class="booking-card">
+
+            <div class="input-header">
+                <div>
+                    <h2>Client booking email</h2>
+                    <p>Paste the entire email exactly as you received it.</p>
+                </div>
+            </div>
+
+            <textarea
+                id="bookingInput"
+                placeholder="Paste the client's booking email here..."
+            ></textarea>
+
+            <div class="input-footer">
+
+                <span id="bookingStatus">
+                    Ready
+                </span>
+
+                <button
+                    type="button"
+                    id="parseBookingsBtn"
+                    class="primary-button"
+                >
+                    Parse Bookings
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section
+            id="resultsSection"
+            class="booking-card results-section hidden"
+        >
+
+            <div class="results-header">
+
+                <div>
+                    <span class="eyebrow">REVIEW</span>
+                    <h2>Bookings found</h2>
+                </div>
+
+                <div
+                    id="bookingCount"
+                    class="booking-count"
+                >
+                    0 bookings
+                </div>
+
+            </div>
+
+
+            <div id="warnings"></div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Check-in</th>
+                            <th>Check-out</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookingResults">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="results-footer">
+
+                <button
+                    type="button"
+                    id="clearBtn"
+                    class="secondary-button"
+                >
+                    Clear
+                </button>
+
+                <button
+                    type="button"
+                    id="calendarBtn"
+                    class="primary-button"
+                >
+                    Add to Google Calendar
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="booking-manager.js"></script>
+
+</body>
+</html>
