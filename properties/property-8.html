@@ -174,63 +174,12 @@
   </div>
 </section>
 
-
-<section class="section bg-light py-5" data-aos="fade-up">
-  <div class="container">
-
-    <div class="row justify-content-center">
-
-      <div class="col-lg-6">
-
-        <div class="card bg-white shadow-lg border-0 rounded-4">
-
-          <div class="card-body p-4">
-
-            <h3 class="text-center mb-2">Request Booking</h3>
-            <p class="text-center text-muted mb-4">
-              Check availability and send a booking request
-            </p>
-
-            <form name="booking" method="POST" data-netlify="true">
-
-              <input type="hidden" name="form-name" value="booking">
-              <input type="hidden" name="property" value="Mowbray Road, Annexe">
-
-              <div class="form-group mb-3">
-                <input id="checkin" type="text" class="form-control form-control-lg"
-       placeholder="Check-in date" readonly>
-              </div>
-
-              <div class="form-group mb-3">
-                <input id="checkout" type="text" class="form-control form-control-lg"
-       placeholder="Check-out date" readonly>
-              </div>
-
-              <div class="form-group mb-3">
-                <input type="text" name="name" class="form-control form-control-lg"
-                       placeholder="Full Name" required>
-              </div>
-
-              <div class="form-group mb-3">
-                <input type="email" name="email" class="form-control form-control-lg"
-                       placeholder="Email Address" required>
-              </div>
-
-              <button type="submit" class="btn btn-primary w-100 btn-lg">
-                Request Booking
-              </button>
-
-            </form>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
+<!-- Guesty booking/search widget -->
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div id="search-widget_IO312PWQ"></div>
   </div>
-</section>
+</div>
 
 <div class="site-footer">
   <div class="container">
@@ -398,7 +347,75 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+<script>
+(function (window, document, widgetName, cssUrl, jsUrl, options) {
 
+  function logError(message) {
+    if (window.console) {
+      window.console.log("[Guesty Embedded Widget]:", message);
+    }
+  }
+
+  var head = document.getElementsByTagName("head")[0];
+
+  // Load Guesty CSS
+  if (cssUrl) {
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = cssUrl;
+    link.media = "all";
+    head.appendChild(link);
+  }
+
+  // Initialise Guesty widget
+  function initWidget() {
+    try {
+      window[widgetName]
+        .create(options)
+        .catch(function (error) {
+          logError(error.message);
+        });
+    } catch (error) {
+      logError(error.message);
+    }
+  }
+
+  var loaded = false;
+
+  function loadWidget() {
+    if (
+      !loaded &&
+      (!this.readyState || this.readyState === "complete")
+    ) {
+      loaded = true;
+      initWidget();
+    }
+  }
+
+  // Load Guesty JavaScript
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = jsUrl;
+  script.async = true;
+  script.onload = script.onreadystatechange = loadWidget;
+
+  var firstScript = document.getElementsByTagName("script")[0];
+  firstScript.parentNode.insertBefore(script, firstScript);
+
+})(
+  window,
+  document,
+  "GuestySearchBarWidget",
+  "https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.css",
+  "https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.js",
+  {
+    siteUrl: "hoodhomes.guestybookings.com",
+    color: "#206CFF"
+  }
+);
+</script>
+  
 <!-- Preloader -->
     <div id="overlayer"></div>
     <div class="loader">
